@@ -1,4 +1,7 @@
-git clone -b new_master https://github.com/max2max/ss-panel-v3-mod.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
+git clone -b new_master https://github.com/max2max/ss-panel-v3-mod.git tmp<br />
+mv tmp/.* ./<br />
+mv tmp/* ./<br />
+rm -rf tmp && git reset --hard<br />
 
 chown -R root:root *<br />
 chmod -R 755 *<br />
