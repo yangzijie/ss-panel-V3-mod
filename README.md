@@ -1,4 +1,4 @@
-git clone -b new_master https://github.com/max2max/ss-panel-v3-mod.git tmp<br />
+git clone https://github.com/max2max/ss-panel-v3-mod.git tmp<br />
 mv tmp/.* ./<br />
 mv tmp/* ./<br />
 rm -rf tmp && git reset --hard<br />
