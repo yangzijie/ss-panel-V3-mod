@@ -40,23 +40,22 @@
 							</div>
 						</div>
 
-						
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
 									<p class="card-heading">最近五分钟使用IP</p>
-									<p>请确认都为自己的IP，如有异常请及时修改连接密码。部分节点不支持记录。</p>
+									<p>请确认都为自己的IP，如有异常请及时修改连接密码。</p>
 									<div class="card-table">
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
-													
+
 													<th>IP</th>
 													<th>归属地</th>
 												</tr>
 												{foreach $userip as $single=>$location}
 													<tr>
-														
+
 														<td>{$single}</td>
 														<td>{$location}</td>
 													</tr>
@@ -65,11 +64,10 @@
 										</div>
 									</div>
 								</div>
-								
 							</div>
-</div>
-					
-					
+						</div>
+
+
 						<div class="card">
 							<div class="card-main">
 								<div class="card-inner margin-bottom-no">
@@ -79,13 +77,13 @@
 										<div class="table-responsive">
 											<table class="table">
 												<tr>
-													
+
 													<th>IP</th>
 													<th>归属地</th>
 												</tr>
 												{foreach $userloginip as $single=>$location}
 													<tr>
-														
+
 														<td>{$single}</td>
 														<td>{$location}</td>
 													</tr>
@@ -94,11 +92,11 @@
 										</div>
 									</div>
 								</div>
-								
+
 							</div>
 						</div>
-					
-					
+
+
 
 						<div class="card margin-bottom-no">
 							<div class="card-main">
@@ -137,19 +135,19 @@
 											</div>
 										</div>
 									</div>
-									
+
 								</div>
 							</div>
 						</div>
 					</div>
-					
+
 				</div>
 			</section>
 		</div>
 	</main>
-	
-	
-	
+
+
+
 
 
 
@@ -158,4 +156,3 @@
 
 
 {include file='user/footer.tpl'}
-
