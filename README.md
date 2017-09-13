@@ -1,32 +1,45 @@
-# 介绍
+git clone -b new_master https://github.com/max2max/ss-panel-v3-mod.git tmp && mv tmp/.git . && rm -rf tmp && git reset --hard
 
-一个修改的 ss panel 版本，多了蛮多新东西。
 
-# 准备
+chown -R root:root *
+chmod -R 755 *
+chown -R www:www storage
 
-1.一台 VPS
+php composer.phar install
 
-# 环境
+cp config/.config.php.example config/.config.php
 
-1.PHP 5.6 + (推荐 PHP 7.1.1)
-2.MYSQL 5.5 + 
-3.以及安装和配置过程中涉及到的种种东西。
+vim config/.config.php
 
-# 安装
 
-[https://github.com/esdeathlove/ss-panel-v3-mod/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E](https://github.com/esdeathlove/ss-panel-v3-mod/wiki/%E5%AE%89%E8%A3%85%E8%AF%B4%E6%98%8E)
+$System_Config['db_driver'] = 'mysql';
+$System_Config['db_host'] = 'localhost';
+$System_Config['db_database'] = '';
+$System_Config['db_username'] = '';
+$System_Config['db_password'] = '';
+$System_Config['db_charset'] = 'utf8';
+$System_Config['db_collation'] = 'utf8_general_ci';
+$System_Config['db_prefix'] = '';
 
-# FAQ
 
-[https://github.com/esdeathlove/ss-panel-v3-mod/wiki/FAQ](https://github.com/esdeathlove/ss-panel-v3-mod/wiki/FAQ)
+source glzjin_all.sql;
+flush privileges;
 
-# 遇到问题？
+php xcat createAdmin
+php xcat resetTraffic
+php xcat sendDiaryMail
 
-不好意思，使用上的，比如说你不会使用，请自行看现在已有的[说明](https://github.com/esdeathlove/ss-panel-v3-mod/wiki/)以及自行琢磨。
+香港 1 - Shadowsocks
 
-如果你发现了你认为你实在无法解决的问题，请在 [https://github.com/esdeathlove/ss-panel-v3-mod/issues](https://github.com/esdeathlove/ss-panel-v3-mod/issues) 按照所提示的 issue 模板，进行反馈以及获得解决方案。发送 issue 之前请三思，不恰当的内容可能会造成你之后都无法获得回应。
+git checkout spay
+source spay.sql
 
-# 最新消息获取
+crontab -e
 
-[Telegram频道 glzjinmodnews](https://t.me/glzjinmodnews)
+30 22 * * * /opt/php-7.1.7/bin/php /home/www/test.org/xcat sendDiaryMail
+0 0 * * * /opt/php-7.1.7/bin/php /home/www/test.org/xcat dailyjob
+*/1 * * * * /opt/php-7.1.7/bin/php /home/www/test.org/xcat checkjob
 
+##开了vpn的加这个
+*/1 * * * * /opt/php-7.1.7/bin/php /home/www/ccavs.org/xcat synclogin
+*/1 * * * * /opt/php-7.1.7/bin/php /home/www/ccavs.org/xcat syncnas
