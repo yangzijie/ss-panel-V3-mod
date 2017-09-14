@@ -24,50 +24,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-									
-										<div id="check_chart" style="height: 300px; width: 100%;"></div>
-										
-										<script src="//cdn.staticfile.org/canvasjs/1.7.0/canvasjs.js"></script>
-										<script type="text/javascript">
-											var chart = new CanvasJS.Chart("check_chart",
-											{
-												title:{
-													text: "用户签到情况(总用户 {$sts->getTotalUser()}人)",
-													fontFamily: "Impact",
-													fontWeight: "normal"
-												},
-
-												legend:{
-													verticalAlign: "bottom",
-													horizontalAlign: "center"
-												},
-												data: [
-												{
-													//startAngle: 45,
-													indexLabelFontSize: 20,
-													indexLabelFontFamily: "Garamond",
-													indexLabelFontColor: "darkgrey",
-													indexLabelLineColor: "darkgrey",
-													indexLabelPlacement: "outside",
-													type: "doughnut",
-													showInLegend: true,
-													dataPoints: [
-														{
-															y: {(1-($sts->getCheckinUser()/$sts->getTotalUser()))*100}, legendText:"没有签到过的用户 {number_format((1-($sts->getCheckinUser()/$sts->getTotalUser()))*100,2)}% {$sts->getTotalUser()-$sts->getCheckinUser()}人", indexLabel: "没有签到过的用户 {number_format((1-($sts->getCheckinUser()/$sts->getTotalUser()))*100,2)}% {$sts->getTotalUser()-$sts->getCheckinUser()}人"
-														},
-														{
-															y: {(($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->getTotalUser())*100}, legendText:"曾经签到过的用户 {number_format((($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->getTotalUser())*100,2)}% {$sts->getCheckinUser()-$sts->getTodayCheckinUser()}人", indexLabel: "曾经签到过的用户 {number_format((($sts->getCheckinUser()-$sts->getTodayCheckinUser())/$sts->getTotalUser())*100,2)}% {$sts->getCheckinUser()-$sts->getTodayCheckinUser()}人"
-														},
-														{
-															y: {$sts->getTodayCheckinUser()/$sts->getTotalUser()*100}, legendText:"今日签到用户 {number_format($sts->getTodayCheckinUser()/$sts->getTotalUser()*100,2)}% {$sts->getTodayCheckinUser()}人", indexLabel: "今日签到用户 {number_format($sts->getTodayCheckinUser()/$sts->getTotalUser()*100,2)}% {$sts->getTodayCheckinUser()}人"
-														}
-													]
-												}
-												]
-											});
-
-											chart.render();
-										</script>
+									<p>今日签到：<p/>
+									<p>{$sts->getTodayCheckinUser()}人<p/>
 										
 									</div>
 									
