@@ -114,12 +114,6 @@
 															<p>请注意，在当前状态下您的 SSR 订阅链接已经失效，您无法通过此种方式导入节点。</p>
 														{/if}
 														
-<script type="text/javascript">
-$(document).ready(function() {
-$("#mypassword").on('click', function() {if ($(this).html() == "密码：<b>点击显示密码</b>") {$(this).html("密码：WnMxh1EU");} else {$(this).html("密码：<b>点击显示密码</b>");}});
-});
-</script>
-<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
 														
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
@@ -402,6 +396,9 @@ window.onload = function() {
 
 
 $(document).ready(function () {
+
+$("#mypassword").on('click', function() {if ($(this).html() == "密码：<b>点击显示密码</b>") {$(this).html("密码：WnMxh1EU");} else {$(this).html("密码：<b>点击显示密码</b>");}});
+
 	$("#checkin").click(function () {
 		$.ajax({
 			type: "POST",
