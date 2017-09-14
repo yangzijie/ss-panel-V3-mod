@@ -305,14 +305,12 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">续命获取流量</p>
-											<p>流量不会重置，可以通过续命获取流量。</p>
+										<p class="card-heading">签到</p>
+											<p>签到可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
 
-											<p>每次续命可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
+											<p>每天可以签到一次。您可以点击按钮或者摇动手机来续命。</p>
 
-											<p>每天可以续命一次。您可以点击按钮或者摇动手机来续命。</p>
-
-											<p>上次续命时间：<code>{$user->lastCheckInTime()}</code></p>
+											<p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
 
 											<p id="checkin-msg"></p>
 
