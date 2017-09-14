@@ -98,7 +98,7 @@
 														</p>
 															<p>端口：{$user->port}</p>
 
-															<p>密码：<div id="mypassword" style="display: inline"><b>点击显示密码</b></div></p>
+															<p id="mypassword">密码：<b>点击显示密码</b></p>
 
 															<p>自定义加密：{$user->method}</p>
 
@@ -397,7 +397,9 @@ window.onload = function() {
 
 $(document).ready(function () {
 
-$("#mypassword").on('click', function() {if ($(this).html() == "密码：<b>点击显示密码</b>") {$(this).html("密码：WnMxh1EU");} else {$(this).html("密码：<b>点击显示密码</b>");}});
+$("#mypassword").click(function() 
+{if ($(this).html() == "密码：<b>点击显示密码</b>") {$(this).html("密码：WnMxh1EU");} else {$(this).html("密码：<b>点击显示密码</b>");}}
+);
 
 	$("#checkin").click(function () {
 		$.ajax({
