@@ -397,12 +397,7 @@ window.onload = function() {
 
 $(document).ready(function () {
 
-$("#mypassword").click(function() {
-if   ($(this).html() == "密码：<b>点击显示密码</b>") 
-     {$(this).html("密码：WnMxh1EU")}
-else 
-     {$(this).html("密码：<b>点击显示密码</b>")}
-})
+
 	$("#checkin").click(function () {
 		$.ajax({
 			type: "POST",
@@ -491,4 +486,17 @@ initGeetest({
 {/if}
 
 
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+
+$("#mypassword").click(function() {
+if   ($(this).html() == "密码：<b>点击显示密码</b>") 
+     {$(this).html("密码：WnMxh1EU");}
+else 
+     {$(this).html("密码：<b>点击显示密码</b>");}
+});
+
+});
 </script>
