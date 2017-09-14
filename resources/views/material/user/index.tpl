@@ -100,7 +100,7 @@
 
 															<p>密码：{$user->passwd}</p>
 
-															<p>自定义加密：<div id="showpwd" style="display: inline"><b>点击显示密码</b></div></p>
+															<p>自定义加密：<div id="showpwd" style="display: inline">点击显示密码</div></p>
 
 															<p>自定义协议：{$user->protocol}</p>
 
@@ -114,7 +114,14 @@
 															<p>请注意，在当前状态下您的 SSR 订阅链接已经失效，您无法通过此种方式导入节点。</p>
 														{/if}
 														
-
+<script type="text/javascript">
+$("#showpwd").on('click', function() {
+    if  ($(this).html() == "点击显示密码")
+        {$(this).html("{$user->method}");}
+    else
+        {$(this).html("点击显示密码");}
+}
+</script>
 														
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
