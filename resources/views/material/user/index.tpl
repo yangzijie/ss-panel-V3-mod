@@ -128,7 +128,7 @@
 													</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
-				                                        <p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（单端口多用户）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（普通端口）</a></p>
+				                                        <p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（单端口多用户）</a></p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_ios">
 														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
