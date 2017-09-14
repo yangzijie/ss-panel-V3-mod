@@ -26,10 +26,10 @@
 <div class="card-inner margin-bottom-no">	
 								        
 						<p class="card-heading">流量使用</p>
-					    <p>今日流量：{$user->TodayusedTraffic()}</p>
-					    <p>总流量：{$user->enableTraffic()}</p>
+						<p>今日流量：{$user->TodayusedTraffic()}</p>
+						<p>总流量：{$user->enableTraffic()}</p>
 						<div style="height:300px" id="trans_chart"></div>
-                        <p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
+						<p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
 				
     <script src="//cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
@@ -100,7 +100,7 @@
 
 															<p>密码：{$user->passwd}</p>
 
-															<p>自定义加密：{$user->method}</p>
+															<p>自定义加密：<div id="showpwd" style="display: inline"><b>点击显示密码</b></div></p>
 
 															<p>自定义协议：{$user->protocol}</p>
 
@@ -113,6 +113,16 @@
 
 															<p>请注意，在当前状态下您的 SSR 订阅链接已经失效，您无法通过此种方式导入节点。</p>
 														{/if}
+														
+<script type="text/javascript">
+$("#showpwd").on('click', function() {
+    if  ($(this).html() == "<b>点击显示密码</b>")
+        {$(this).html("{$user->method}");}
+    else
+        {$(this).html("<b>点击显示密码</b>");}
+}
+}
+														
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
 													<p>您有三种方式导入所有节点<br><br>
@@ -182,17 +192,13 @@
 															<p>各个节点的地址请到节点列表查看！</p>
 
 
-															<p><dt>端口</dt>
-															<dd>{$user->port}</dd></p>
+															<p>端口：{$user->port}</p>
 
-															<p><dt>密码</dt>
-															<dd>{$user->passwd}</dd></p>
+															<p>密码：{$user->passwd}</p>
 
-															<p><dt>自定义加密</dt>
-															<dd>{$user->method}</dd></p>
+															<p>自定义加密：{$user->method}</p>
 
-															<p><dt>自定义混淆</dt>
-															<dd>{$user->obfs}</dd></p>
+															<p>自定义混淆：{$user->obfs}</p>
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 SS 客户端下无法连接。请您选用 SSR 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
