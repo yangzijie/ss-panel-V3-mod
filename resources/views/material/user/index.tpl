@@ -119,6 +119,7 @@ $(document).ready(function() {
 $("#mypassword").on('click', function() {if ($(this).html() == "密码：<b>点击显示密码</b>") {$(this).html("密码：WnMxh1EU");} else {$(this).html("密码：<b>点击显示密码</b>");}});
 });
 </script>
+<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
 														
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
