@@ -297,18 +297,6 @@
 							</div>
 
 
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">最新公告</p>
-										{if $ann != null}
-										<p>{$ann->content}</p>
-										{/if}
-										<p><a href="/user/announcement"/>查看更多公告</a></p>
-									</div>
-
-								</div>
-							</div>
 
 
 
@@ -348,36 +336,20 @@
 								</div>
 							</div>
 
-
-						{if $enable_duoshuo=='true'}
-
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">讨论区</p>
-											<div class="ds-thread" data-thread-key="0" data-title="index" data-url="{$baseUrl}/user/"></div>
-											<script type="text/javascript">
-											var duoshuoQuery = {
-
-											short_name:"{$duoshuo_shortname}"
-
-
-											};
-												(function() {
-													var ds = document.createElement('script');
-													ds.type = 'text/javascript';ds.async = true;
-													ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-													ds.charset = 'UTF-8';
-													(document.getElementsByTagName('head')[0]
-													 || document.getElementsByTagName('body')[0]).appendChild(ds);
-												})();
-											</script>
+										<p class="card-heading">最新公告</p>
+										{if $ann != null}
+										<p>{$ann->content}</p>
+										{/if}
+										<p><a href="/user/announcement"/>查看更多公告</a></p>
 									</div>
 
 								</div>
 							</div>
 
-						{/if}
+
 
 						{include file='dialog.tpl'}
 
