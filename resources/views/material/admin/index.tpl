@@ -7,7 +7,9 @@
 
 
 	<main class="content">
+		<div class="content-header ui-content-header">
 
+		</div>
 		<div class="container">
 			<section class="content-inner margin-top-no">
 
