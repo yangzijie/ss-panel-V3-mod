@@ -114,14 +114,7 @@
 															<p>请注意，在当前状态下您的 SSR 订阅链接已经失效，您无法通过此种方式导入节点。</p>
 														{/if}
 														
-<script type="text/javascript">
-$("#showpwd").on('click', function() {
-    if  ($(this).html() == "<b>点击显示密码</b>")
-        {$(this).html("{$user->method}");}
-    else
-        {$(this).html("<b>点击显示密码</b>");}
-}
-}
+
 														
 													</div>
 													<div class="tab-pane fade" id="all_ssr_windows">
