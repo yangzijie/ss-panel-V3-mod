@@ -92,6 +92,10 @@
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
+																												<p>SSR 订阅地址：<br>
+															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
+															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
+														</p>
 															<p><dt>端口</dt>
 															<dd>{$user->port}</dd></p>
 
@@ -122,10 +126,7 @@
 														3、【推荐】右键小飞机--服务器--SSR服务器订阅设置，将订阅地址设置为下面的地址，其他参数留空，确定之后再更新 SSR 服务器订阅。<br>
 													</p>
 
-													<p>SSR 订阅地址：<br>
-														普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
-														单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
-													</p>
+													
 													</div>
 													<div class="tab-pane fade" id="all_ssr_mac">
 				                                        <p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（单端口多用户）</a></p>
@@ -133,10 +134,7 @@
 													<div class="tab-pane fade" id="all_ssr_ios">
 														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
 														<p><a href="{$ssr_url_all_mu}">点此添加服务器（单端口多用户）</a></p>
-														<p>SSR 订阅地址：<br>
-															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
-															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
-														</p>
+
 													</div>
 													<div class="tab-pane fade" id="all_ssr_android">
 														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
@@ -144,10 +142,6 @@
 														ACL 地址<br>
 														<a href="/link/{$acl_token}">长按复制</a><br>
 														在SSR内路由中，选择自定义ACL文件，粘贴过去</p>
-														<p>SSR 订阅地址：<br>
-															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
-															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
-														</p>
 													</div>
 													<div class="tab-pane fade" id="all_ssr_router">
 														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令<br><br>
