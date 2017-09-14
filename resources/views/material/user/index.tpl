@@ -21,18 +21,28 @@
 
 						<div class="col-lg-6 col-md-6">
 
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">最新公告</p>
-										{if $ann != null}
-										<p>{$ann->content}</p>
-										{/if}
-										<p><a href="/user/announcement"/>查看更多公告</a></p>
-									</div>
+<div class="card">
+<div class="card-main">
+<div class="card-inner margin-bottom-no">	
+								        
+						<p class="card-heading">流量使用</p>
+					    <p>今日流量：{$user->TodayusedTraffic()}</p>
+					    <p>总流量：{$user->enableTraffic()}</p>
+						<div style="height:300px" id="trans_chart"></div>
+                        <p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
-								</div>
-							</div>
+				
+    <script src="//cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
+	<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
+	<script src="//dl.ccavs.org/user.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        var trans_chart = echarts.init(document.getElementById('trans_chart'));
+        init_trans_chart_options.series[0].data[0].value = (({{$user->u}}+{{$user->d}})/({{$user->transfer_enable}}+1)*100).toFixed(2);
+        trans_chart.setOption(init_trans_chart_options,true);
+    </script>
+</div>
+</div>
+</div>
 
 							<div class="card">
 								<div class="card-main">
@@ -286,28 +296,21 @@
 								</div>
 							</div>
 
-<div class="card">
-<div class="card-main">
-<div class="card-inner margin-bottom-no">	
-								        
-						<p class="card-heading">流量使用</p>
-					    <p>今日流量：{$user->TodayusedTraffic()}</p>
-					    <p>总流量：{$user->enableTraffic()}</p>
-						<div style="height:300px" id="trans_chart"></div>
-                        <p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
-				
-    <script src="//cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
-	<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
-	<script src="//dl.ccavs.org/user.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var trans_chart = echarts.init(document.getElementById('trans_chart'));
-        init_trans_chart_options.series[0].data[0].value = (({{$user->u}}+{{$user->d}})/({{$user->transfer_enable}}+1)*100).toFixed(2);
-        trans_chart.setOption(init_trans_chart_options,true);
-    </script>
-</div>
-</div>
-</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading">最新公告</p>
+										{if $ann != null}
+										<p>{$ann->content}</p>
+										{/if}
+										<p><a href="/user/announcement"/>查看更多公告</a></p>
+									</div>
+
+								</div>
+							</div>
+
+
 
 
 
