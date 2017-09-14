@@ -24,7 +24,7 @@
 								<div class="card">
 									<div class="card-main">
 										<div class="card-inner">
-											<p>请问您今天要来点兔子吗？</p>
+											<p>逝者如斯夫，不舍昼夜！</p>
 										</div>
 									</div>
 								</div>
