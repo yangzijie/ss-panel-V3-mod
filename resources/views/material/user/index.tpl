@@ -96,15 +96,15 @@
 															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
 														</p>
-															<p><dt>端口</dt><dd>{$user->port}</dd></p>
+															<p>端口：{$user->port}</p>
 
-															<p><dt>密码</dt><dd>{$user->passwd}</dd></p>
+															<p>密码：{$user->passwd}</p>
 
-															<p><dt>自定义加密</dt><dd>{$user->method}</dd></p>
+															<p>自定义加密：{$user->method}</p>
 
-															<p><dt>自定义协议</dt><dd>{$user->protocol}</dd></p>
+															<p>自定义协议：{$user->protocol}</p>
 
-															<p><dt>自定义混淆</dt><dd>{$user->obfs}</dd></p>
+															<p>自定义混淆：{$user->obfs}</p>
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 ShadowsocksR 客户端下无法连接。请您选用 Shadowsocks 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
