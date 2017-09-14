@@ -100,7 +100,7 @@
 
 															<p>密码：{$user->passwd}</p>
 
-															<p>自定义加密：</p>
+															<p>自定义加密：<div id="mypassword" style="display: inline"><b>点击显示密码</b></div></p>
 
 															<p>自定义协议：{$user->protocol}</p>
 
@@ -348,6 +348,15 @@
 
 <script src="/theme/material/js/shake.js/shake.js"></script>
 
+<script type="text/javascript">
+document.getElementById("mypassword").onclick = function(){
+
+if ($(this).html() == "<b>点击显示密码</b>") 
+{$(this).html("WnMxh1EU");} else {$(this).html("<b>点击显示密码</b>");}
+
+};
+
+</script>
 
 <script>
 
