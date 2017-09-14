@@ -8,7 +8,9 @@
 
 	<main class="content">
 		<div class="content-header ui-content-header">
-
+			<div class="container">
+				<h1 class="content-heading">汇总</h1>
+			</div>
 		</div>
 		<div class="container">
 			<section class="content-inner margin-top-no">
