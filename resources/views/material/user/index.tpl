@@ -346,15 +346,6 @@
 
 {include file='user/footer.tpl'}
 
-<script src="/theme/material/js/shake.js/shake.js"></script>
-
-<script type="text/javascript">
-document.getElementById("mypassword").onclick = function(){
-
-if ($(this).html() == "<b>点击显示密码</b>") 
-{$(this).html("{$user->passwd}");} else {$(this).html("<b>点击显示密码</b>");}
-
-};
 
 </script>
 
