@@ -260,24 +260,15 @@
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">帐号使用情况</p>
 										<dl class="dl-horizontal">
-											<p><dt>帐号等级</dt>
-											<dd>{$user->class}</dd></p>
+											<p>帐号等级：{$user->class}</p>
 
-											<p><dt>等级过期时间</dt>
-											<dd>{$user->class_expire}</dd></p>
+											<p>等级过期时间：{$user->class_expire}</p>
 
-											<p><dt>帐号过期时间</dt>
-											<dd>{$user->expire_in}</dd>
+											<p>帐号过期时间：{$user->expire_in}</p>
 
-											<p><dt>速度限制</dt>
-											{if $user->node_speedlimit!=0}
-											<dd>{$user->node_speedlimit}Mbps</dd>
-											{else}
-											<dd>不限速</dd>
-											{/if}</p>
+											<p>速度限制：{if $user->node_speedlimit!=0}{$user->node_speedlimit}Mbps{else}不限速{/if}</p>
 
-											<p><dt>上次使用</dt>
-											<dd>{$user->lastSsTime()}</dd></p>
+											<p>上次使用：{$user->lastSsTime()}</p>
 										</dl>
 									</div>
 
@@ -294,11 +285,11 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">签到</p>
-											<p>签到可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
+											
 
-											<p>每天可以签到一次。<br />您可以点击按钮或者摇动手机。</p>
+											<p>点击按钮或者摇动手机</p>
 
-											<p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
+											<p>上次签到：<code>{$user->lastCheckInTime()}</code></p>
 
 											<p id="checkin-msg"></p>
 
