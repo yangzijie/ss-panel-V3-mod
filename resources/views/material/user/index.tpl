@@ -98,9 +98,9 @@
 														</p>
 															<p>端口：{$user->port}</p>
 
-															<p>密码：{$user->passwd}</p>
+															<p>密码：<div id="mypassword" style="display: inline"><b>点击显示密码</b></div></p>
 
-															<p>自定义加密：<div id="mypassword" style="display: inline"><b>点击显示密码</b></div></p>
+															<p>自定义加密：{$user->method}</p>
 
 															<p>自定义协议：{$user->protocol}</p>
 
@@ -352,7 +352,7 @@
 document.getElementById("mypassword").onclick = function(){
 
 if ($(this).html() == "<b>点击显示密码</b>") 
-{$(this).html("WnMxh1EU");} else {$(this).html("<b>点击显示密码</b>");}
+{$(this).html("{$user->passwd}");} else {$(this).html("<b>点击显示密码</b>");}
 
 };
 
