@@ -308,7 +308,7 @@
 										<p class="card-heading">签到</p>
 											<p>签到可以获取{$config['checkinMin']}~{$config['checkinMax']}MB流量。</p>
 
-											<p>每天可以签到一次。您可以点击按钮或者摇动手机来续命。</p>
+											<p>每天可以签到一次。<br />您可以点击按钮或者摇动手机。</p>
 
 											<p>上次签到时间：<code>{$user->lastCheckInTime()}</code></p>
 
