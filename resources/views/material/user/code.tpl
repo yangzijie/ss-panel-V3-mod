@@ -121,7 +121,20 @@
 							</div>
 						</div>
 					</div>
-					
+					<div class="col-lg-12 col-md-12">
+						<div class="card margin-bottom-no">
+						<div class="card-main">
+						<div class="card-inner">
+						<div class="card-inner">
+							<p class="card-heading">充值二维码</p>
+							<p>请务必注明qq邮箱（方便在群里找到你）——或其他联系方式</p>
+							<p>站长不是全天24小时在线，所以下发充值码有一定延时（3～4小时不等），请稍安毋躁</p>
+							<p><img src="https://dl.ccavs.org/myself/donate.png" /></p>
+						</div>
+						</div>
+						</div>
+						</div>
+					</div>
 					{include file='dialog.tpl'}
 				</div>
 			</section>
