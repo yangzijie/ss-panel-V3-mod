@@ -45,3 +45,7 @@ crontab -e<br />
 ##开了vpn的加这个<br />
 */1 * * * * /opt/php-7.1.7/bin/php /home/www/ccavs.org/xcat synclogin<br />
 */1 * * * * /opt/php-7.1.7/bin/php /home/www/ccavs.org/xcat syncnas<br />
+
+git pull origin<br />
+git reset --hard origin/new_master
+
