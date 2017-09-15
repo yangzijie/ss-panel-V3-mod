@@ -129,7 +129,7 @@
 							<p class="card-heading">充值二维码</p>
 							<p>请务必注明qq邮箱（方便在群里找到你）——或其他联系方式</p>
 							<p>站长不是全天24小时在线，所以下发充值码有一定延时（3～4小时不等），请稍安毋躁</p>
-							<p><img src="https://dl.ccavs.org/myself/donate.png" /></p>
+							<p><img width="50%" src="https://dl.ccavs.org/myself/donate.png" /></p>
 						</div>
 						</div>
 						</div>
