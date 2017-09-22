@@ -370,7 +370,8 @@ class AuthController extends BaseController
         $user->reg_date=date("Y-m-d H:i:s");
         $user->reg_ip=$_SERVER["REMOTE_ADDR"];
         $user->money=0;
-        $user->class=0;
+        $user->class=1;
+        $user->class_expire=date("Y-m-d H:i:s", time()+2*86400);
         $user->plan='A';
         $user->node_speedlimit=0;
         $user->theme=Config::get('theme');
