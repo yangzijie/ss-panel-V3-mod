@@ -30,6 +30,9 @@ flush privileges;<br />
 php xcat createAdmin<br />
 php xcat resetTraffic<br />
 php xcat sendDiaryMail<br />
+php xcat setTelegram<br />
+php xcat initQQWry<br />
+php xcat initdownload<br />
 
 香港 1 - Shadowsocks<br />
 <br />
