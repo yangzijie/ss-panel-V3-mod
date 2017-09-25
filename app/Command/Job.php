@@ -358,7 +358,7 @@ class Job
         }
 
         //auto renew
-        $boughts=Bought::where("renew", "<", time())->where("renew", "<>", 0)->get();
+        $boughts=User::where("transfer_enable"-"u"-"d", "<=", 0)->get();
         foreach ($boughts as $bought) {
             $user=User::where("id", $bought->userid)->first();
 
