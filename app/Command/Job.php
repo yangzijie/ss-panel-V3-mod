@@ -359,7 +359,7 @@ class Job
 
         //auto renew
         $boughts = User::where("transfer_enable", "=>", 0)->get();
-        foreach ($boughts as $bought) {
+        foreach ($boughts as $user) {
             $user=User::where("id", $bought->userid)->first();
 
             if ($user == null) {
