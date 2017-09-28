@@ -242,8 +242,8 @@
 										<p><i class="icon icon-lg">android</i>&nbsp;Android-SSR <a href="https://dl.ccavs.org/%E6%96%B0%E7%89%88%E5%AE%A2%E6%88%B7%E7%AB%AF/ssr-3.4.0.5.apk" target="_blank">点此下载</a></p>
 										<p><i class="icon icon-lg">android</i>&nbsp;Android-Postern <a href="https://dl.ccavs.org/%E6%97%A7%E7%89%88/postern.apk" target="_blank">点此下载</a></p>
 										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;Mac OS X (须Mac os 10.11及以上)<a href="https://dl.ccavs.org/%E5%BD%B1%E6%A2%AD/ShadowsocksX-NG-R8.dmg" target="_blank">点此下载</a></p>
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;IOS-Shadowrocket <a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8" target="_blank">点此下载</a></p>										
-										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;IOS-Surge <a href="https://itunes.apple.com/us/app/surge-web-developer-tool-and-proxy-utility/id1040100637?mt=8" target="_blank">点此下载</a></p>
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;IOS-Shadowrocket、Surge、Potatso 中国区已下架</p>										
+										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;IOS-在AppStore中搜索 wingy、ssr或potatso等关键词——商店里还有类似应用，请谨慎下载</p>
 										<p><i class="icon icon-lg">laptop_mac</i>&nbsp;IOS-Wingy <a href="https://itunes.apple.com/cn/app/wingy-proxy-for-ss-http-s/id1178584911?l=zh&mt=8" target="_blank">点此下载</a></p>
 									</div>
 								</div>
