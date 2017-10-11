@@ -119,7 +119,7 @@
 													<div class="tab-pane fade" id="all_ssr_windows">
 													<p>您有三种方式导入所有节点<br><br>
 														1、<br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（普通端口）</a><br><a href="/user/getpcconf?without_mu=0">点此下载配置文件（单端口多用户）</a><br>将配置文件放在ShadowsocksR文件夹内，重启SSR<br><br>
-														2、<br><a class="copy-text" data-clipboard-text="{$android_add_without_mu}">左键点此复制（普通端口）</a><br><a class="copy-text" data-clipboard-text="{$android_add}">左键点此复制（单端口多用户）</a><br>然后右键小飞机 -- 从剪贴板复制地址<br><br>
+														2、<br><a class="copy-text" data-clipboard-text="{$ssr_url_all}">左键点此复制（普通端口）</a><br><a class="copy-text" data-clipboard-text="{$ssr_url_all_mu}">左键点此复制（单端口多用户）</a><br>然后右键小飞机 -- 从剪贴板复制地址<br><br>
 														3、【推荐】右键小飞机--服务器--SSR服务器订阅设置，将订阅地址设置为下面的地址，其他参数留空，确定之后再更新 SSR 服务器订阅。<br>
 													</p>
 
