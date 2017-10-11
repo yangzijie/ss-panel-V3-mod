@@ -96,6 +96,13 @@
 															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
 															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
 														</p>
+													<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（单端口多用户）</a></p>
+													<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
+													<p><a href="{$ssr_url_all_mu}">点此添加服务器（单端口多用户）</a></p>
+													<p>ACL 地址<br>
+													<a href="/link/{$acl_token}">长按复制</a><br>
+													在SSR内路由中，选择自定义ACL文件，粘贴过去</p>
+														
 															<p>端口：{$user->port}</p>
 
 															<div id="mypassword">密码：<b>点击显示密码</b></div>
@@ -116,39 +123,6 @@
 														
 														
 													</div>
-													<div class="tab-pane fade" id="all_ssr_windows">
-													<p>您有三种方式导入所有节点<br><br>
-														1、<br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（普通端口）</a><br><a href="/user/getpcconf?without_mu=0">点此下载配置文件（单端口多用户）</a><br>将配置文件放在ShadowsocksR文件夹内，重启SSR<br><br>
-														2、<br><a class="copy-text" data-clipboard-text="{$ssr_url_all}">左键点此复制（普通端口）</a><br><a class="copy-text" data-clipboard-text="{$ssr_url_all_mu}">左键点此复制（单端口多用户）</a><br>然后右键小飞机 -- 从剪贴板复制地址<br><br>
-														3、【推荐】右键小飞机--服务器--SSR服务器订阅设置，将订阅地址设置为下面的地址，其他参数留空，确定之后再更新 SSR 服务器订阅。<br>
-													</p>
-
-													
-													</div>
-													<div class="tab-pane fade" id="all_ssr_mac">
-				                                        <p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（单端口多用户）</a></p>
-													</div>
-													<div class="tab-pane fade" id="all_ssr_ios">
-														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
-														<p><a href="{$ssr_url_all_mu}">点此添加服务器（单端口多用户）</a></p>
-
-													</div>
-													<div class="tab-pane fade" id="all_ssr_android">
-														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
-														<p><a href="{$ssr_url_all_mu}">点此添加服务器（单端口多用户）</a><br><br> 
-														ACL 地址<br>
-														<a href="/link/{$acl_token}">长按复制</a><br>
-														在SSR内路由中，选择自定义ACL文件，粘贴过去</p>
-													</div>
-													<div class="tab-pane fade" id="all_ssr_router">
-														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令<br><br>
-														普通端口<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br><br>
-														单端口多用户<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=0 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br><br>
-														执行完毕以后，在路由器的设置面板选择 Shadowsocks 服务器</p>
-													</div>
-
 												</div>
 												<div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="all_ss">
 													<nav class="tab-nav margin-top-no">
