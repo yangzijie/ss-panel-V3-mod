@@ -83,12 +83,11 @@
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
-														<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code>
-														</p>
-														<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br></p>
-														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
+														<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code></p>
+														<p><a href="{$ssr_url_all}">点此添加服务器</a></p>
+														<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件</a></p>
 														<p>ACL文件url<br>
-														<a href="/link/{$acl_token}">长按复制</a>，在SSR内路由中，选择自定义ACL文件，粘贴，确定</p>	
+														<a href="/link/{$acl_token}">长按复制</a>，在SSR内功能设置，路由中，选择自定义ACL文件，粘贴，点击确定</p>	
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 ShadowsocksR 客户端下无法连接。请您选用 Shadowsocks 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
@@ -103,13 +102,13 @@
 													
 													<div class="tab-pane fade active in" id="multi_user">
 													<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code></p>
-													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
 													<p><a href="{$ssr_url_all_mu}">点此添加服务器</a></p>
+													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
 													</div>
 													
 													<div class="tab-pane fade active in" id="general_info">
 													<p>端口：{$user->port}</p>
-													<p>密码：{$user->password}</p>
+													<p>密码：{$user->passwd}</p>
 													<p>自定义加密：{$user->method}</p>
 													<p>自定义协议：{$user->protocol}</p>
 													<p>自定义混淆：{$user->obfs}</p>
