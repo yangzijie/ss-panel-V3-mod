@@ -128,51 +128,39 @@
 															</li>
 														</ul>
 													</nav>
-													<div class="tab-pane fade active in" id="all_ss_info">
+													<div class="tab-pane fade active in" id="link">
 														{$user = URL::getSSConnectInfo($pre_user)}
 														{$ss_url_all = URL::getAllUrl($pre_user, 0, 1)}
 														{$ss_url_all_mu = URL::getAllUrl($pre_user, 1, 1)}
 														{$ss_url_all_win = URL::getAllUrl($pre_user, 0, 2)}
-
+														
 														{if URL::SSCanConnect($user)}
 														<dl class="dl-horizontal">
-															<p>各个节点的地址请到节点列表查看！</p>
-
-
-															<p>端口：{$user->port}</p>
-
-															<p>密码：{$user->passwd}</p>
-
-															<p>自定义加密：{$user->method}</p>
-
-															<p>自定义混淆：{$user->obfs}</p>
+														
+														<p>Windows：<a href="{$ss_url_all_win}">点此添加服务器</a></p>
+														<p>IOS & Android：<a href="{$ss_url_all}">点此添加服务器</a></p>
+														<p>Mac & Windows：<a  href="/user/getpcconf?is_mu=0&is_ss=1">点此下载配置文件</a></p>
+														<p>IOS-Surge：<a  href="/link/{$ios_token}?is_ss=1">点此下载配置文件</a></p>
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 SS 客户端下无法连接。请您选用 SSR 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
 															<p>同时, Shadowsocks 单端口多用户的连接不受您设置的影响,您可以在此使用相应的客户端进行连接~</p>
 														{/if}
 													</div>
-													<div class="tab-pane fade" id="all_ss_windows">
-														<p><a href="/ssr-download/ss-win.zip">下载</a>，解压，运行程序，然后您有两种方式导入所有节点<br>
-															(1)下载<a href="/user/getpcconf?is_mu=0&is_ss=1">这个（普通端口）</a>，放到小飞机的目录下，然后打开小飞机。<br>
-															(2)点击<a class="copy-text" data-clipboard-text="{$ss_url_all_win}">这里（普通端口）</a>, 然后右键小飞机 -- 从剪贴板导入 URL<br>
+													
+													
+													<div class="tab-pane fade" id="multi_user">
+													<p><a href="{$ss_url_all_mu}">点此添加服务器</a></p>
+													<p>Mac：<a  href="/user/getpcconf?is_mu=1&is_ss=1">点此下载配置文件</a></p>
+													<p>IOS-Surge：<a  href="/link/{$ios_token}?is_ss=1&is_mu=1">点此下载配置文件</a></p>
 													</div>
-													<div class="tab-pane fade" id="all_ss_mac">
-														<p><a href="/ssr-download/ss-mac.zip">下载</a>，安装，然后下载<a href="/user/getpcconf?is_mu=0&is_ss=1">这个（普通端口）</a>或者<a href="/user/getpcconf?is_mu=1&is_ss=1">这个（单端口多用户）</a>，运行程序，小飞机上右键 服务器列表 子菜单 的 “导入服务器配置文件...” 导入这个文件，然后选择一个合适的服务器，更新一下PAC，然后开启系统代理即可上网。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_ios">
-														<p>推荐下载<a href="https://itunes.apple.com/cn/app/shadowrocket/id932747118?mt=8">Shadowrocket</a>，然后在 Safari 中点击<a href="{$ss_url_all}">这个（普通端口）</a>或者<a href="{$ss_url_all_mu}">这个（单端口多用户）</a>，然后点击确定，就可以批量添加节点。</p>
-														<p>iOS 下载<a href="/link/{$ios_token}?is_ss=1">这个（普通端口）</a>或者<a href="/link/{$ios_token}?is_ss=1&is_mu=1">这个（单端口多用户）</a>，导入到 Surge 中，然后就可以随意切换服务器上网了。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_android">
-														<p><a href="/ssr-download/ss-android.apk">下载</a>，再<a href="/ssr-download/ss-android-obfs.apk">下载</a>，然后安装，然后在手机上点击<a class="copy-text" data-clipboard-text="{$ss_url_all}">这个链接（普通端口）</a>或者<a class="copy-text" data-clipboard-text="{$ss_url_all_mu}">这个链接（单端口多用户端口）</a>复制到剪贴板，打开 Shadowsocks 客户端，选择从剪贴板导入，然后选择一个节点，设置一下路由为绕过大陆，点击飞机就可以上网了。</p>
-													</div>
-													<div class="tab-pane fade" id="all_ss_router">
-														<p>路由器 刷入<a href="http://www.right.com.cn/forum/thread-161324-1-1.html">这个固件</a>，然后 SSH 登陆路由器，执行以下命令（导入普通端口）<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														或者这个单端口多用户的<br>
-														<code>wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash && echo -e "\n0 */3 * * * wget -O- {$baseUrl}/link/{$router_token_without_mu}?is_ss=1 | bash\n">> /etc/storage/cron/crontabs/admin && killall crond && crond </code><br>
-														执行完毕以后就可以到路由器的设置面板里随意选择 Shadowsocks 服务器进行连接了。</p>
+													
+													<div class="tab-pane fade" id="general_info">
+													<p>端口：{$user->port}</p>
+													<p>密码：{$user->passwd}</p>
+													<p>自定义加密：{$user->method}</p>
+													<p>自定义协议：{$user->protocol}</p>
+													<p>自定义混淆：{$user->obfs}</p>
 													</div>
 												</div>
 											</div>
