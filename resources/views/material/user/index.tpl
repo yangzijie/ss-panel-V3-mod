@@ -84,8 +84,7 @@
 														<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code></p>
 														<p><a href="{$ssr_url_all}">点此添加服务器</a></p>
 														<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件</a></p>
-														<p>ACL文件url<br>
-														<a href="/link/{$acl_token}">长按复制</a>，在SSR内功能设置，路由中，选择自定义ACL文件，粘贴，点击确定</p>	
+														<p>ACL文件url:<a href="/link/{$acl_token}">复制这个链接</a></p>	
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 ShadowsocksR 客户端下无法连接。请您选用 Shadowsocks 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
