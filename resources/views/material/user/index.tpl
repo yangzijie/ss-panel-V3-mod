@@ -63,7 +63,9 @@
 											<div class="tab-content">
 												<div class="tab-pane fade {if $ssr_prefer}active in{/if}" id="all_ssr">
 													{$pre_user = URL::cloneUser($user)}
-
+													{$user = URL::getSSRConnectInfo($pre_user)}
+													{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
+													{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
 															<li class="active">
@@ -78,8 +80,6 @@
 														</ul>
 													</nav>
 													<div class="tab-pane fade active in" id="link">
-														{$user = URL::getSSRConnectInfo($pre_user)}
-														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
 														<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code></p>
@@ -100,7 +100,6 @@
 													</div>
 													
 													<div class="tab-pane fade" id="multi_user">
-													{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 													<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code></p>
 													<p><a href="{$ssr_url_all_mu}">点此添加服务器</a></p>
 													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
