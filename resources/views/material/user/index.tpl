@@ -67,51 +67,28 @@
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
 															<li class="active">
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_info"><i class="icon icon-lg">info_outline</i>&nbsp;连接信息</a>
+															<a class="waves-attach" data-toggle="tab" href="#link"><i class="icon icon-lg">info_outline</i>&nbsp;普通端口</a>
 															</li>
 															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_windows"><i class="icon icon-lg">desktop_windows</i>&nbsp;Windows</a>
+															<a class="waves-attach" data-toggle="tab" href="#multi_user"><i class="icon icon-lg">info_outline</i>&nbsp;单端口多用户</a>
 															</li>
 															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_mac"><i class="icon icon-lg">laptop_mac</i>&nbsp;MacOS</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_ios"><i class="icon icon-lg">laptop_mac</i>&nbsp;iOS</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_android"><i class="icon icon-lg">android</i>&nbsp;Android</a>
-															</li>
-															<li>
-																<a class="waves-attach" data-toggle="tab" href="#all_ssr_router"><i class="icon icon-lg">router</i>&nbsp;路由器</a>
+															<a class="waves-attach" data-toggle="tab" href="#general_info"><i class="icon icon-lg">info_outline</i>&nbsp;ss账号信息</a>
 															</li>
 														</ul>
 													</nav>
-													<div class="tab-pane fade active in" id="all_ssr_info">
+													<div class="tab-pane fade active in" id="link">
 														{$user = URL::getSSRConnectInfo($pre_user)}
 														{$ssr_url_all = URL::getAllUrl($pre_user, 0, 0)}
 														{$ssr_url_all_mu = URL::getAllUrl($pre_user, 1, 0)}
 														{if URL::SSRCanConnect($user)}
 														<dl class="dl-horizontal">
-														<p>SSR 订阅地址：<br>
-															普通端口：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code><br>
-															单端口多用户：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code>
+														<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=0</code>
 														</p>
-													<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br><a  href="/user/getpcconf?without_mu=1">点此下载配置文件（单端口多用户）</a></p>
-													<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
-													<p><a href="{$ssr_url_all_mu}">点此添加服务器（单端口多用户）</a></p>
-													<p>ACL 地址<br>
-													<a href="/link/{$acl_token}">长按复制</a><br>
-													在SSR内路由中，选择自定义ACL文件，粘贴过去</p>
-														
-															<p>端口：{$user->port}</p>
-
-															<div id="mypassword">密码：<b>点击显示密码</b></div>
-
-															<p>自定义加密：{$user->method}</p>
-
-															<p>自定义协议：{$user->protocol}</p>
-
-															<p>自定义混淆：{$user->obfs}</p>
+														<p><a href="/user/getpcconf?without_mu=0">点此下载配置文件（普通端口）</a><br><br></p>
+														<p><a href="{$ssr_url_all}">点此添加服务器（普通端口）</a></p>
+														<p>ACL文件url<br>
+														<a href="/link/{$acl_token}">长按复制</a>，在SSR内路由中，选择自定义ACL文件，粘贴，确定</p>	
 														</dl>
 														{else}
 															<p>您好，您目前的 加密方式，混淆，或者协议设置在 ShadowsocksR 客户端下无法连接。请您选用 Shadowsocks 客户端来连接，或者到 资料编辑 页面修改后再来查看此处。</p>
@@ -123,6 +100,21 @@
 														
 														
 													</div>
+													
+													<div class="tab-pane fade active in" id="multi_user">
+													<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code></p>
+													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
+													<p><a href="{$ssr_url_all_mu}">点此添加服务器</a></p>
+													</div>
+													
+													<div class="tab-pane fade active in" id="general_info">
+													<p>端口：{$user->port}</p>
+													<p>密码：{$user->password}</p>
+													<p>自定义加密：{$user->method}</p>
+													<p>自定义协议：{$user->protocol}</p>
+													<p>自定义混淆：{$user->obfs}</p>
+													</div>
+													
 												</div>
 												<div class="tab-pane fade {if !$ssr_prefer}active in{/if}" id="all_ss">
 													<nav class="tab-nav margin-top-no">
