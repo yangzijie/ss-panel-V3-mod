@@ -118,17 +118,17 @@
 													<nav class="tab-nav margin-top-no">
 														<ul class="nav nav-list">
 															<li class="active">
-															<a class="waves-attach" data-toggle="tab" href="#link"><i class="icon icon-lg">info_outline</i>&nbsp;普通端口</a>
+															<a class="waves-attach" data-toggle="tab" href="#ss_link"><i class="icon icon-lg">info_outline</i>&nbsp;普通端口</a>
 															</li>
 															<li>
-															<a class="waves-attach" data-toggle="tab" href="#multi_user"><i class="icon icon-lg">info_outline</i>&nbsp;单端口多用户</a>
+															<a class="waves-attach" data-toggle="tab" href="#ss_multi_user"><i class="icon icon-lg">info_outline</i>&nbsp;单端口多用户</a>
 															</li>
 															<li>
-															<a class="waves-attach" data-toggle="tab" href="#general_info"><i class="icon icon-lg">info_outline</i>&nbsp;SS账号信息</a>
+															<a class="waves-attach" data-toggle="tab" href="#ss_general_info"><i class="icon icon-lg">info_outline</i>&nbsp;SS账号信息</a>
 															</li>
 														</ul>
 													</nav>
-													<div class="tab-pane fade active in" id="link">
+													<div class="tab-pane fade active in" id="ss_link">
 														{$user = URL::getSSConnectInfo($pre_user)}
 														{$ss_url_all = URL::getAllUrl($pre_user, 0, 1)}
 														{$ss_url_all_mu = URL::getAllUrl($pre_user, 1, 1)}
@@ -149,13 +149,13 @@
 													</div>
 													
 													
-													<div class="tab-pane fade" id="multi_user">
+													<div class="tab-pane fade" id="ss_multi_user">
 													<p><a href="{$ss_url_all_mu}">点此添加服务器</a></p>
 													<p>Mac：<a  href="/user/getpcconf?is_mu=1&is_ss=1">点此下载配置文件</a></p>
 													<p>IOS-Surge：<a  href="/link/{$ios_token}?is_ss=1&is_mu=1">点此下载配置文件</a></p>
 													</div>
 													
-													<div class="tab-pane fade" id="general_info">
+													<div class="tab-pane fade" id="ss_general_info">
 													<p>端口：{$user->port}</p>
 													<p>密码：{$user->passwd}</p>
 													<p>自定义加密：{$user->method}</p>
