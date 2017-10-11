@@ -73,7 +73,7 @@
 															<a class="waves-attach" data-toggle="tab" href="#multi_user"><i class="icon icon-lg">info_outline</i>&nbsp;单端口多用户</a>
 															</li>
 															<li>
-															<a class="waves-attach" data-toggle="tab" href="#general_info"><i class="icon icon-lg">info_outline</i>&nbsp;ss账号信息</a>
+															<a class="waves-attach" data-toggle="tab" href="#general_info"><i class="icon icon-lg">info_outline</i>&nbsp;SSR账号信息</a>
 															</li>
 														</ul>
 													</nav>
@@ -100,13 +100,13 @@
 														
 													</div>
 													
-													<div class="tab-pane fade active in" id="multi_user">
+													<div class="tab-pane fade" id="multi_user">
 													<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code></p>
 													<p><a href="{$ssr_url_all_mu}">点此添加服务器</a></p>
 													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
 													</div>
 													
-													<div class="tab-pane fade active in" id="general_info">
+													<div class="tab-pane fade" id="general_info">
 													<p>端口：{$user->port}</p>
 													<p>密码：{$user->passwd}</p>
 													<p>自定义加密：{$user->method}</p>
