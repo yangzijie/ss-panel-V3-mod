@@ -48,7 +48,6 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">快速配置</p>
-										<p>推荐使用SSR订阅功能，SSR订阅链接是通用的，支持订阅的客户端都能用<br>本站尚未开通单端口多用户，故选用普通端口即可</p>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
 												<li {if $ssr_prefer}class="active"{/if}>
