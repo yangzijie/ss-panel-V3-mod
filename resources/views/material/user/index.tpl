@@ -51,20 +51,12 @@
                                 <div class="progress progress-striped">
                                     <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40"
                                          aria-valuemin="0" aria-valuemax="100"
-                                         style="width: {$user->trafficUsagePercent()}%">
+                                         style="width: 50%">
                                         <span class="sr-only">Transfer</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <dl class="dl-horizontal">
-                            <dt>总流量</dt>
-                            <dd>{$user->enableTraffic()}</dd>
-                            <dt>已用流量</dt>
-                            <dd>{$user->usedTraffic()}</dd>
-                            <dt>剩余流量</dt>
-                            <dd>{$user->unusedTraffic()}</dd>
-                        </dl>
                     </div>
                     <!-- /.box-body -->
 
