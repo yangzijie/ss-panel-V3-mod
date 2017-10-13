@@ -49,9 +49,9 @@
                         <div class="row">
                             <div class="col-xs-12">
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="40"
-                                         aria-valuemin="0" aria-valuemax="100"
-                                         style="width: 50%">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="25" aria-valuemax="100"
+                                         style="width: {$user->trafficUsagePercent()}%">
                                         <span class="sr-only">Transfer</span>
                                     </div>
                                 </div>
