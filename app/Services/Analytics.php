@@ -23,6 +23,11 @@ class Analytics
         return User::where('class', '=', 1)->count();
     }
 
+    public function getShop1User()
+    {
+        return Bought::where('shopid', '=', 1)->count();
+    }
+
     public function getCheckinUser()
     {
         return User::where('last_check_in_time', '>', 0)->count();
