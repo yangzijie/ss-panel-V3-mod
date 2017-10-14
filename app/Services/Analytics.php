@@ -12,6 +12,14 @@ class Analytics
     {
         return User::count();
     }
+    public function getClass0User()
+    {
+        return User::where('class', '=', 0)->count();
+    }
+    public function getClass1User()
+    {
+        return User::where('class', '=', 1)->count();
+    }
 
     public function getCheckinUser()
     {
