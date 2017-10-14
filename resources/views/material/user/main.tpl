@@ -294,7 +294,7 @@
 							
 							<li>
 								<a href="/user/wiki">
-									<i class="icon icon-lg">help</i>&nbsp;新手教程
+									<i class="icon icon-lg">help</i>&nbsp;新手引导
 								</a>
 							</li>
 							
