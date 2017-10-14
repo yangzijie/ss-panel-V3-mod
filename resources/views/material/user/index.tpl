@@ -63,6 +63,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 										<p class="card-heading">快速配置</p>
+										<p>新手引导：<a href="/user/wiki">SSR下载与使用教程</a></p>
 										<nav class="tab-nav margin-top-no">
 											<ul class="nav nav-list">
 												<li {if $ssr_prefer}class="active"{/if}>
@@ -115,7 +116,7 @@
 													<div class="tab-pane fade" id="multi_user">
 													<p>SSR 订阅地址：<code>{$baseUrl}/link/{$ssr_sub_token}?mu=1</code></p>
 													<p><a href="{$ssr_url_all_mu}">点此添加服务器</a></p>
-													<p><a  href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
+													<p><a href="/user/getpcconf?without_mu=1">点此下载配置文件</a></p>
 													</div>
 													
 													<div class="tab-pane fade" id="general_info">
