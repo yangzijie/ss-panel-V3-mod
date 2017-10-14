@@ -201,8 +201,18 @@
 
 
 
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading">最新公告</p>
+										{if $ann != null}
+										<p>{$ann->content}</p>
+										{/if}
+										<p><a href="/user/announcement"/>查看更多公告</a></p>
+									</div>
 
-
+								</div>
+							</div>
 
 
 							<div class="card">
@@ -232,19 +242,6 @@
 												<p><a class="btn btn-brand disabled btn-flat waves-attach" href="#"><span class="icon">check</span>&nbsp;不能签到</a></p>
 											{/if}
 										</div>
-									</div>
-
-								</div>
-							</div>
-
-							<div class="card">
-								<div class="card-main">
-									<div class="card-inner margin-bottom-no">
-										<p class="card-heading">最新公告</p>
-										{if $ann != null}
-										<p>{$ann->content}</p>
-										{/if}
-										<p><a href="/user/announcement"/>查看更多公告</a></p>
 									</div>
 
 								</div>
