@@ -24,8 +24,8 @@
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
-									<p>今日签到：<p/>
-									<p>{$sts->getTodayCheckinUser()}人<p/>
+									<p>用户总数：<p/>
+									<p>{$sts->getTotalUser()}人<p/>
 										
 									</div>
 									
