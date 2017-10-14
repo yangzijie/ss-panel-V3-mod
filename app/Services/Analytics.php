@@ -2,6 +2,7 @@
 
 namespace App\Services;
 
+use App\Models\Bought;
 use App\Models\User;
 use App\Models\Node;
 use App\Utils\Tools;
