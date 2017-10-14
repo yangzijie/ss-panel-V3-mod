@@ -93,6 +93,11 @@ class UserController extends BaseController
 
         return $this->view()->assign('speedtest', $Speedtest)->assign('hour', Config::get('Speedtest_duration'))->display('user/lookingglass.tpl');
     }
+    
+    public function wiki($request, $response, $args)
+    {
+        return $this->view()->display('user/wiki.tpl');
+    }
 
 
 
