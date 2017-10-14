@@ -21,6 +21,10 @@ class Analytics
     {
         return User::where('class', '=', 1)->count();
     }
+    public function get200GUser()
+    {
+        return User::where('enableTrafficInGB', '>=', 200)->count();
+    }
     public function getShop1User()
     {
         return Bought::where('shopid', '=', 1)->count();
