@@ -1,4 +1,6 @@
 {include file='user/main.tpl'}
+<main class="content">
+<div class="container">
 							<div class="card">
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
@@ -15,4 +17,6 @@
 									</div>
 								</div>
 							</div>
+</div>
+</main>
 {include file='user/footer.tpl'}
