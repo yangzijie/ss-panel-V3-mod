@@ -27,8 +27,8 @@
 								        
 						<p class="card-heading">流量使用</p>
 						<p>今日流量：{$user->TodayusedTraffic()}</p>
-						<p>总流量：{$user->enableTraffic()}</p>
 						<div style="height:300px" id="trans_chart"></div>
+						<p>总流量：{$user->enableTraffic()}</p>
 						<p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
 				
