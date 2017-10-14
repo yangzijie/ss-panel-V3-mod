@@ -17,6 +17,21 @@
 									</div>
 								</div>
 							</div>
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+										<p class="card-heading">SSR使用教程</p>
+										<p>Windows教程 <a href="https://dl.ccavs.org/doc/Windows.doc" target="_blank">点此下载</a></p>
+										<p>Android教程 <a href="https://dl.ccavs.org/doc/Android.doc" target="_blank">点此下载</a></p>
+										<p>测延迟&更换服务器 <a href="https://dl.ccavs.org/doc/laytency&changeserver.doc" target="_blank">点此下载</a></p>
+										<p>Tcping测试端口连通性 <a href="https://dl.ccavs.org/doc/Tcping.doc" target="_blank">点此下载</a></p>
+										<p>手动添加配置 <a href="https://dl.ccavs.org/doc/Add-server.doc" target="_blank">点此下载</a></p>
+										<p>ios系列，以小火箭教程为参考，若有不明之处可看上面的教程，都是有参考意义的</p>
+										<p>IOS-小火箭教程 <a href="https://dl.ccavs.org/doc/Shadowrocket.doc" target="_blank">点此下载</a></p>
+										<p>IOS-小火箭订阅教程 <a href="https://dl.ccavs.org/doc/Shadowrocket-sub.doc" target="_blank">点此下载</a></p>
+									</div>
+								</div>
+							</div>
 </div>
 </main>
 {include file='user/footer.tpl'}
