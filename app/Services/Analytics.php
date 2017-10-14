@@ -13,6 +13,11 @@ class Analytics
         return User::count();
     }
 
+    public function getLevel1User()
+    {
+        return User::where('class', '>', 0)->count();
+    }
+
     public function getCheckinUser()
     {
         return User::where('last_check_in_time', '>', 0)->count();
