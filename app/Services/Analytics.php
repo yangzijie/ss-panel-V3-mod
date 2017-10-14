@@ -23,7 +23,7 @@ class Analytics
     }
     public function get200GUser()
     {
-        return User::where('enableTrafficInGB', '>=', 200)->count();
+        return User::where('transfer_enable', '>=', 214748364800)->count();
     }
     public function getShop1User()
     {
