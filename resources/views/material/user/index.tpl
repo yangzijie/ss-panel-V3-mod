@@ -30,9 +30,10 @@
   
   <div class="progress-1">{$user->trafficUsagePercent()}%
     <div class="progress-bar-1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{$user->trafficUsagePercent()}%">
-      
+    
     </div>
   </div>
+  <div class="progress-2">{$user->trafficUsagePercent()}%</div>
 						<p>总流量：{$user->enableTraffic()}</p>
 						<p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
