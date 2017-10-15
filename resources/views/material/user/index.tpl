@@ -29,7 +29,7 @@
 						<p>今日流量：{$user->TodayusedTraffic()}</p>
 
                                 <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
+                                    <div class="progress-bar" role="progressbar" aria-valuenow="80"
                                          aria-valuemin="25" aria-valuemax="100"
                                          style="width: {$user->trafficUsagePercent()}%">{$user->trafficUsagePercent()}%
                                     </div>
