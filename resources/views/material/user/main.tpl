@@ -202,6 +202,7 @@
 }
 .progress-1 {
     height: 20px;
+    float: left;
     margin-bottom: 20px;
     overflow: hidden;
     text-align: center;
@@ -210,7 +211,10 @@
     border-radius: 4px;
     -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
     box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
-}			
+}
+.progress-2 {
+text-align: center;
+}
 	</style>
 	
 	
