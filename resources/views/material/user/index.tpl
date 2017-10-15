@@ -338,7 +338,7 @@ $(document).ready(function () {
 
 {else}
 
-
+<script src="/theme/material/js/shake.js/shake.js"></script>
 window.onload = function() {
     var myShakeEvent = new Shake({
         threshold: 15
