@@ -202,7 +202,6 @@
     height: 20px;
     float: left;
     width: 90%;
-    margin-bottom: 20px;
     overflow: hidden;
     text-align: center;
     color: #fff;
