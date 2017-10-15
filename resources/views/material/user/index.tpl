@@ -27,19 +27,18 @@
 								        
 						<p class="card-heading">流量使用</p>
 						<p>今日流量：{$user->TodayusedTraffic()}</p>
-						<div style="height:300px" id="trans_chart"></div>
+
+                                <div class="progress progress-striped">
+                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
+                                         aria-valuemin="25" aria-valuemax="100"
+                                         style="width: {$user->trafficUsagePercent()}%">
+                                    </div>
+                                </div>
 						<p>总流量：{$user->enableTraffic()}</p>
 						<p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
 				
-    <script src="//cdn.bootcss.com/echarts/2.2.7/echarts-all.js"></script>
-	<script src="//cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
-	<script src="//dl.ccavs.org/user.js" type="text/javascript"></script>
-    <script type="text/javascript">
-        var trans_chart = echarts.init(document.getElementById('trans_chart'));
-        init_trans_chart_options.series[0].data[0].value = (({{$user->u}}+{{$user->d}})/({{$user->transfer_enable}}+1)*100).toFixed(2);
-        trans_chart.setOption(init_trans_chart_options,true);
-    </script>
+
 </div>
 </div>
 </div>
@@ -48,12 +47,7 @@
                     <div class="box-body">
                         <div class="row">
                             <div class="col-xs-12">
-                                <div class="progress progress-striped">
-                                    <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
-                                         aria-valuemin="25" aria-valuemax="100"
-                                         style="width: {$user->trafficUsagePercent()}%">
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>
