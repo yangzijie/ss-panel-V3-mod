@@ -27,12 +27,13 @@
 								        
 						<p class="card-heading">流量使用</p>
 						<p>今日流量：{$user->TodayusedTraffic()}</p>
-  
+  <div>
   <div class="progress-1">
     <div class="progress-bar-1" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{$user->trafficUsagePercent()}%">
     </div>
   </div>
   <div class="progress-2">{$user->trafficUsagePercent()}%</div>
+  </div>
 						<p>总流量：{$user->enableTraffic()}</p>
 						<p>已用：{$user->usedTraffic()} / 剩余：{$user->unusedTraffic()}</p>
 
