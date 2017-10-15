@@ -28,10 +28,11 @@
 						<p class="card-heading">流量使用</p>
 						<p>今日流量：{$user->TodayusedTraffic()}</p>
   
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  
-  
 
+  
+  <style type="text/css">
+@import url(https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css);
+</style>
   <div class="progress">
     <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:{$user->trafficUsagePercent()}%">
       {$user->trafficUsagePercent()}%
