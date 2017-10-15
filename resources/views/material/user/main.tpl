@@ -185,7 +185,34 @@
 			font-weight: 300;
 			color: #fff;
 		}
-				
+.progress-bar-1 {
+    float: left;
+    width: 0;
+    height: 100%;
+    font-size: 12px;
+    line-height: 20px;
+    background-color: #337ab7;
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,.15);
+    -webkit-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+}
+.progress-1 {
+    height: 20px;
+    float: left;
+    width: 90%;
+    overflow: hidden;
+    text-align: center;
+    color: #fff;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+    box-shadow: inset 0 1px 2px rgba(0,0,0,.1);
+}
+.progress-2 {
+text-align: center;
+}		
 	</style>
 	
 	
