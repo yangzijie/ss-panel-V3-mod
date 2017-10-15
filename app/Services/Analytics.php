@@ -26,10 +26,8 @@ class Analytics
 
     public function getShop1User()
     {
-        $endtime=Bought::('datetime')+30*86400;
-        if ( 1, '<', 2 ) {
-            return Bought::where('shopid', '=', 1)->count();
-        }
+        return Bought::where('shopid', '=', 1)->count();
+        
     }
 
     public function getCheckinUser()
