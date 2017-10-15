@@ -31,7 +31,7 @@
                                 <div class="progress progress-striped">
                                     <div class="progress-bar progress-bar-primary" role="progressbar" aria-valuenow="80"
                                          aria-valuemin="25" aria-valuemax="100"
-                                         style="width: {$user->trafficUsagePercent()}%">
+                                         style="width: {$user->trafficUsagePercent()}%">{$user->trafficUsagePercent()}%
                                     </div>
                                 </div>
 						<p>总流量：{$user->enableTraffic()}</p>
