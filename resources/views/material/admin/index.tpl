@@ -25,6 +25,7 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 									<p>用户总数：{$sts->getTotalUser()}人<p/>
+									<p>shopid1：{$sts->getShop1User()}人<p/>
 									<p>200G套餐用户：{$sts->get200GUser()}人<p/>
 									<p>等级为1：{$sts->getClass1User()}人<p/>
 									<p>等级为0：{$sts->getClass0User()}人<p/>
