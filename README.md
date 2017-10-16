@@ -52,3 +52,5 @@ crontab -e<br />
 git pull origin<br />
 git reset --hard origin/new_master
 
+models创建函数（建模）<br />
+controller将其加工分系后，传递给web页面<br />
