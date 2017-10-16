@@ -53,7 +53,7 @@ git pull origin<br />
 git reset --hard origin/new_master
 
 models创建函数（建模）<br />
-controller将其加工分系后，传递给web页面<br />
+controller将其加工分析后，传递给web页面<br />
 截至当前：<br />
 u 上传；d 下载<br />
 截至昨天dailyjob的重置的时间<br />
