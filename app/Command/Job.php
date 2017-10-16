@@ -168,6 +168,8 @@ class Job
                   $user->transfer_enable = Tools::toGB($shop->reset_value());
                   $user->u = 0;
                   $user->d = 0;
+                  $user->last_day_u_t = 0;
+                  $user->last_day_d_t = 0;
                   $user->last_day_t = 0;
                   $user->save();
 
