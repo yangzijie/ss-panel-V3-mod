@@ -191,6 +191,8 @@ class Job
 
         $users = User::all();
         foreach ($users as $user) {
+            $user->last_day_u_t=$user->u;
+            $user->last_day_d_t=$user->d;
             $user->last_day_t=($user->u+$user->d);
             $user->save();
 
@@ -198,6 +200,8 @@ class Job
             if (date("d") == $user->auto_reset_day) {
                 $user->u = 0;
                 $user->d = 0;
+                $user->last_day_u_t = 0;
+                $user->last_day_d_t = 0;
                 $user->last_day_t = 0;
                 $user->transfer_enable = $user->auto_reset_bandwidth*1024*1024*1024;
                 $user->save();
