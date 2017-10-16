@@ -58,3 +58,4 @@ controller将其加工分系后，传递给web页面<br />
 u 上传；d 下载<br />
 截至昨天dailyjob的重置的时间<br />
 last_day_t 当时的总流量（上传加下载）<br />
+user表u、d，node表bandwidth都是由后端ssr实时更新
