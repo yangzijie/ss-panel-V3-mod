@@ -13,6 +13,11 @@ class Analytics
     {
         return User::count();
     }
+    public function getTodayNodeTrafficUsage
+    {
+        $usage=Node::('node_bandwidth')-Node::('node_last_day_t');
+        return Tools::flowAutoShow($usage);
+    }
     public function getClass0User()
     {
         return User::where('class', '=', 0)->count();
@@ -84,6 +89,7 @@ class Analytics
         $total = User::sum('transfer_enable') - User::sum('u') - User::sum('d');
         return $total;
     }
+    
     
     
     public function getTotalTraffic()
