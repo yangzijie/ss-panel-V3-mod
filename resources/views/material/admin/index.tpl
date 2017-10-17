@@ -89,9 +89,9 @@
 						<div class="card">
 						<div class="card-main">
 						<div class="card-inner margin-bottom-no">
-							{foreach $nodes as $node}
 							<p>今日流量</p>
-							<p>{$node->name}：({$node->node_bandwidth-$node->node_last_day_t})</p>
+							{foreach $nodes as $node}
+							<p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)}</p>
 							{/foreach}
 						</div>
 						</div>
