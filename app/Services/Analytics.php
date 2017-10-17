@@ -13,6 +13,7 @@ class Analytics
     {
         return User::count();
     }
+    //fail
     public function getTodayNodeTrafficUsage
     {
         
