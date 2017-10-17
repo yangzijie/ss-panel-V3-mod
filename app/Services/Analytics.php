@@ -13,13 +13,7 @@ class Analytics
     {
         return User::count();
     }
-    //fail
-    public function getTodayNodeTrafficUsage
-    {
-        
-        $usage = Node::('node_bandwidth') - Node::('node_last_day_t');
-        return Tools::flowAutoShow($usage);
-    }
+
     public function getClass0User()
     {
         return User::where('class', '=', 0)->count();
