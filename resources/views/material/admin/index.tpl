@@ -111,7 +111,7 @@
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
-							<p>{$node->name}：{flowAutoShow($node->node_bandwidth-$node->node_last_day_t)}</p>
+							<p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)}</p>
 							{/foreach}
 						</div>
 						</div>
