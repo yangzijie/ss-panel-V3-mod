@@ -58,6 +58,8 @@ class XCat
                     return Job::syncnasnode();
             case("syncnas"):
                     return SyncRadius::syncnas();
+            case("dailyjob1"):
+                return Job::DailyJob1();
             case("dailyjob"):
                 return Job::DailyJob();
             case("checkjob"):
