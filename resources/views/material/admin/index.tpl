@@ -104,7 +104,7 @@ else if ( {$node->node_bandwidth-$node->node_last_day_t} < 1099511627776)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1073741824}G"); 
 }
-else ( {$node->node_bandwidth-$node->node_last_day_t} > 1099511627776)
+else if ( {$node->node_bandwidth-$node->node_last_day_t} > 1099511627776)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1099511627776}T");
 }
