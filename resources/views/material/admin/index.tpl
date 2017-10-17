@@ -95,19 +95,28 @@
 							var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
 							if ( 1048576 > size )
 {
-    document.write("{$node->name} ($size/1024)kb"); 
+    document.write("{$node->name}");
+    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1024).toFixed(3));
+    document.write("kb"); 
 }
 else if ( size < 1073741824)
 {
-    document.write("{$node->name} ($size/1048576)M"); 
+    document.write("{$node->name}");
+    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1048576).toFixed(3));
+    document.write("M"); 
 }
 else if ( size < 1099511627776)
 {
-    document.write("{$node->name} ($size/1073741824)G"); 
+    document.write("{$node->name}");
+    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1073741824).toFixed(3));
+    document.write("G"); 
 }
 else if ( size > 1099511627776)
 {
-    document.write("{$node->name} ($size/1099511627776)T");
+    document.write("{$node->name}"); 
+    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1099511627776).toFixed(3));
+    document.write("T");
+
 }
 </script>
 <br />
