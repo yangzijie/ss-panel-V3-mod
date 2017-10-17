@@ -85,6 +85,7 @@
 						</div>
 						
 						<div class="col-lg-6 col-sm-6">
+						<?php
     public static function flowAutoShow($value = 0)
     {
         $kb = 1024;
@@ -106,6 +107,7 @@
             return round($value, 2)."B";
         }
     }
+    ?>
 						<div class="card">
 						<div class="card-main">
 						<div class="card-inner margin-bottom-no">
