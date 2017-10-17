@@ -95,19 +95,19 @@
 							var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
 							if ( 1048576 > size )
 {
-    document.write("{$node->name} (size/1024)kb"); 
+    document.write("{$node->name} ($size/1024)kb"); 
 }
 else if ( size < 1073741824)
 {
-    document.write("{$node->name} (size/1048576)M"); 
+    document.write("{$node->name} ($size/1048576)M"); 
 }
 else if ( size < 1099511627776)
 {
-    document.write("{$node->name} (size/1073741824)G"); 
+    document.write("{$node->name} ($size/1073741824)G"); 
 }
 else if ( size > 1099511627776)
 {
-    document.write("{$node->name} (size/1099511627776)T");
+    document.write("{$node->name} ($size/1099511627776)T");
 }
 </script>
 <br />
