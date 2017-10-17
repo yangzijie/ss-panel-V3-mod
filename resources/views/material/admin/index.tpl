@@ -94,19 +94,19 @@
 							<script> 
 							if ( 1048576 > {$node->node_bandwidth-$node->node_last_day_t} > 1024)
 {
-    <p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)/1024}kb  </p>; 
+    document.write("{($node->node_bandwidth-$node->node_last_day_t)/1024}"); 
 }
 else if ( 1073741824 > {$node->node_bandwidth-$node->node_last_day_t} > 1048576)
 {
-    <p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)/1048576}M  </p>; 
+    document.write("{($node->node_bandwidth-$node->node_last_day_t)/1048576}"); 
 }
 else if ( 1099511627776 > {$node->node_bandwidth-$node->node_last_day_t} > 1073741824)
 {
-    <p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)/1073741824}G  </p>; 
+    document.write("{($node->node_bandwidth-$node->node_last_day_t)/1073741824}"); 
 }
 else ( {$node->node_bandwidth-$node->node_last_day_t} > 1099511627776)
 {
-    <p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)/1099511627776}T  </p>;
+    document.write("{($node->node_bandwidth-$node->node_last_day_t)/1099511627776}");
 }
 </script>
 
