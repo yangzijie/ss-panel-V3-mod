@@ -91,14 +91,14 @@
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
-							<p>{$node->name}： if ( 1048576 > ($node->node_bandwidth-$node->node_last_day_t) > 1024)
-{ (($node->node_bandwidth-$node->node_last_day_t)/1024)kb }
+							if ( 1048576 > ($node->node_bandwidth-$node->node_last_day_t) > 1024)
+{<p>{$node->name}：(($node->node_bandwidth-$node->node_last_day_t)/1024)kb; }
 elseif ( 1073741824 > ($node->node_bandwidth-$node->node_last_day_t) > 1048576)
-{ (($node->node_bandwidth-$node->node_last_day_t)/1048576)M }
+{<p>{$node->name}：(($node->node_bandwidth-$node->node_last_day_t)/1048576; }
 elseif ( 1099511627776 > ($node->node_bandwidth-$node->node_last_day_t) > 1073741824)
-{ (($node->node_bandwidth-$node->node_last_day_t)/1073741824)G }
+{<p>{$node->name}：(($node->node_bandwidth-$node->node_last_day_t)/1073741824)G? }
 else (($node->node_bandwidth-$node->node_last_day_t) > 1099511627776)
-{ (($node->node_bandwidth-$node->node_last_day_t)/1099511627776)T } </p>
+{<p>{$node->name}：(($node->node_bandwidth-$node->node_last_day_t)/1099511627776)T; } </p>
 							{/foreach}
 						</div>
 						</div>
