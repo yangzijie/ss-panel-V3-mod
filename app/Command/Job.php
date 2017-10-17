@@ -152,6 +152,10 @@ class Job
                 }
             }
         }
+        foreach ($nodes as $node) {
+            $node->node_last_day_t=$node->node_bandwidth;
+            $node->save();
+        }
 
         NodeInfoLog::where("log_time", "<", time()-86400*3)->delete();
         NodeOnlineLog::where("log_time", "<", time()-86400*3)->delete();
