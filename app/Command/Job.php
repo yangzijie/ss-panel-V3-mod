@@ -124,6 +124,23 @@ class Job
         }
     }
 
+    public static function DailyJob1()
+    {
+        $nodes = Node::all();
+        foreach ($nodes as $node) {
+            $node->last_day_t=$node->bandwidth;
+            $node->save();
+        }
+        
+        $users = User::all();
+        foreach ($users as $user) {
+            $user->last_day_u_t=$user->u;
+            $user->last_day_d_t=$user->d;
+            $user->save();
+        }
+        
+    }
+    
     public static function DailyJob()
     {
         $nodes = Node::all();
