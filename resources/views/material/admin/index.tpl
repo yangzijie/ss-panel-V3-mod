@@ -96,11 +96,11 @@
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1024}kb"); 
 }
-else if ( 1073741824 > {$node->node_bandwidth-$node->node_last_day_t} > 1048576)
+else if ( 1073741824 > {$node->node_bandwidth-$node->node_last_day_t} && {$node->node_bandwidth-$node->node_last_day_t} > 1048576)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1048576}M"); 
 }
-else if ( 1099511627776 > {$node->node_bandwidth-$node->node_last_day_t} > 1073741824)
+else if ( 1099511627776 > {$node->node_bandwidth-$node->node_last_day_t} && {$node->node_bandwidth-$node->node_last_day_t} > 1073741824)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1073741824}G"); 
 }
