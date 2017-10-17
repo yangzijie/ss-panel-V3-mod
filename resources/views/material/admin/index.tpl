@@ -107,6 +107,9 @@ else ( {$node->node_bandwidth-$node->node_last_day_t} > 1099511627776)
 {
     <p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)/1099511627776}T  </p>;
 }
+<?php
+echo "hi";
+?>
 							{/foreach}
 						</div>
 						</div>
