@@ -92,6 +92,7 @@
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
 							<p>{$node->name}：{($node->node_bandwidth-$node->node_last_day_t)}</p>
+							<p>{$node->name}：{(($sts->getTodayNodeTrafficUsage()))}</p>
 							{/foreach}
 						</div>
 						</div>
