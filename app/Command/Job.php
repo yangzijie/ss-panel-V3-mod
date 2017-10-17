@@ -128,7 +128,7 @@ class Job
     {
         $nodes = Node::all();
         foreach ($nodes as $node) {
-            $node->last_day_t=$node->bandwidth;
+            $node->node_last_day_t=$node->bandwidth;
             $node->save();
         }
         
