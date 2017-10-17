@@ -84,6 +84,20 @@
 						
 						</div>
 						
+						<div class="col-lg-6 col-sm-6">
+						
+						<div class="card">
+						<div class="card-main">
+						<div class="card-inner margin-bottom-no">
+							{foreach $nodes as $node}
+							<p>昨日流量：{$node->node_bandwidth-$node->node_last_day_t}</p>
+							{/foreach}
+						</div>
+						</div>
+						</div>
+						
+						</div>
+						
 					</div>
 				</div>
 			</section>
