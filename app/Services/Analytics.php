@@ -15,7 +15,8 @@ class Analytics
     }
     public function getTodayNodeTrafficUsage
     {
-        $usage = $node->node_bandwidth-$node->node_last_day_t;
+        
+        $usage = Node::('node_bandwidth') - Node::('node_last_day_t');
         return Tools::flowAutoShow($usage);
     }
     public function getClass0User()
