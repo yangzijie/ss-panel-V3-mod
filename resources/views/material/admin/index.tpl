@@ -92,19 +92,20 @@
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
 							<script> 
-							if ( 1048576 > {$node->node_bandwidth-$node->node_last_day_t} )
+							var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
+							if ( 1048576 > size )
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1024}kb"); 
 }
-else if ( {$node->node_bandwidth-$node->node_last_day_t} < 1073741824)
+else if ( size < 1073741824)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1048576}M"); 
 }
-else if ( {$node->node_bandwidth-$node->node_last_day_t} < 1099511627776)
+else if ( size < 1099511627776)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1073741824}G"); 
 }
-else if ( {$node->node_bandwidth-$node->node_last_day_t} > 1099511627776)
+else if ( size > 1099511627776)
 {
     document.write("{$node->name} {($node->node_bandwidth-$node->node_last_day_t)/1099511627776}T");
 }
