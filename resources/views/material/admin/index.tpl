@@ -106,21 +106,21 @@ if ( traffic < 1048576 )
 else if ( traffic < 1073741824 )
 {
     document.write("{$node->name} ");
-    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1048576).toFixed(3));
+    document.write((traffic/1048576).toFixed(3));
     document.write("M"); 
 }
 
 else if ( traffic < 1099511627776 )
 {
     document.write("{$node->name} ");
-    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1073741824).toFixed(3));
+    document.write((traffic/1073741824).toFixed(3));
     document.write("G"); 
 }
 
 else if ( traffic > 1099511627776)
 {
     document.write("{$node->name} "); 
-    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1099511627776).toFixed(3));
+    document.write((traffic/1099511627776).toFixed(3));
     document.write("T");
 
 }
