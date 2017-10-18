@@ -53,8 +53,11 @@ class Analytics
         $total = User::sum('u') + User::sum('d') - User::sum('last_day_t');
         return Tools::flowAutoShow($total);
     }
-    
-    
+    public function getRealTodayTrafficUsage()
+    {
+        $total = Node::sum('bandwidth') - User::sum('node_last_day_t') ;
+        return Tools::flowAutoShow($total);
+    }
     public function getRawTodayTrafficUsage()
     {
         $total = User::sum('u') + User::sum('d') - User::sum('last_day_t');
