@@ -91,9 +91,9 @@
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
-$traffic={$node->node_bandwidth-$node->node_last_day_t}
-<script>
 
+<script>
+$traffic={$node->node_bandwidth-$node->node_last_day_t}
 var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
 if ( 1048576 > $traffic )
 {
