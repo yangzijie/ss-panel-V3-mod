@@ -93,8 +93,7 @@
 							{foreach $nodes as $node}
 
 <script>
-var traffic = {($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate}
-var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
+var traffic = {($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate};
 
 if ( traffic < 1048576 )
 {
