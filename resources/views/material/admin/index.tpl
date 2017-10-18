@@ -93,27 +93,31 @@
 							{foreach $nodes as $node}
 
 <script>
-$traffic={$node->node_bandwidth-$node->node_last_day_t}
+var traffic = {$node->node_bandwidth-$node->node_last_day_t}；
 var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
-if ( 1048576 > $traffic )
+
+if ( traffic < 1048576 )
 {
     document.write("{$node->name} ");
     document.write(({$node->node_bandwidth-$node->node_last_day_t}/1024).toFixed(3));
     document.write("kb"); 
 }
-else if ( $traffic < 1073741824)
+
+else if ( traffic < 1073741824 )
 {
     document.write("{$node->name} ");
     document.write(({$node->node_bandwidth-$node->node_last_day_t}/1048576).toFixed(3));
     document.write("M"); 
 }
-else if ( $traffic < 1099511627776)
+
+else if ( traffic < 1099511627776 )
 {
     document.write("{$node->name} ");
     document.write(({$node->node_bandwidth-$node->node_last_day_t}/1073741824).toFixed(3));
     document.write("G"); 
 }
-else if ( $traffic > 1099511627776)
+
+else if ( traffic > 1099511627776)
 {
     document.write("{$node->name} "); 
     document.write(({$node->node_bandwidth-$node->node_last_day_t}/1099511627776).toFixed(3));
