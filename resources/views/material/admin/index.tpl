@@ -99,7 +99,7 @@ var size = new Number({$node->node_bandwidth-$node->node_last_day_t});
 if ( traffic < 1048576 )
 {
     document.write("{$node->name} ");
-    document.write(({$node->node_bandwidth-$node->node_last_day_t}/1024).toFixed(3));
+    document.write((traffic/1024).toFixed(3));
     document.write("kb"); 
 }
 
