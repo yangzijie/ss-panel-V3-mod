@@ -62,7 +62,7 @@
 				{if $shop->auto_renew_bandwidth==0}
 					<td>流量用尽时不自动续费</td>
 				{else}
-					<th>流量用尽时自动续费</th>
+					<td>流量用尽时自动续费</td>
 				{/if}
 				{if $shop->auto_reset_bandwidth==0}
                                 	<td>不自动重置</td>
