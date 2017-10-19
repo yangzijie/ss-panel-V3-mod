@@ -358,8 +358,8 @@ class Job
         }
 
         //auto renew
-        $boughts=Bought::where("renew", "<", time())->where("renew", "<>", 0)->get();
-        foreach ($boughts as $bought) {
+        $boughts_renew1=Bought::where("renew", "<", time())->where("renew", "<>", 0)->get();
+        foreach ($boughts_renew1 as $bought) {
             $user=User::where("id", $bought->userid)->first();
 
             if ($user == null) {
