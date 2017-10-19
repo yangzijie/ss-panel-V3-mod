@@ -429,6 +429,73 @@ class Job
                 }
             }
         }
+        
+        $boughts_renew2=Bought::where("renew_bandwidth", "<>", 0)->get();
+        foreach ($boughts_renew2 as $bought) {
+            $user=User::where("id", $bought->userid)->first();
+             if ($user->money>=$bought->price) {
+                $shop=Shop::where("id", $bought->shopid)->first();
+
+                if ($shop == null) {
+                    $bought->delete();
+                    continue;
+                }
+
+                $user->money=$user->money-$bought->price;
+
+                $user->save();
+
+                $shop->buy($user, 1);
+
+                $bought->renew=0;
+                $bought->save();
+
+
+                $bought_new=new Bought();
+                $bought_new->userid=$user->id;
+                $bought_new->shopid=$shop->id;
+                $bought_new->datetime=time();
+                $bought_new->renew=time()+$shop->auto_renew*86400;
+                $bought_new->price=$bought->price;
+                $bought_new->coupon="";
+                $bought_new->renew_bandwidth=1;
+                $bought_new->save();
+
+                $subject = Config::get('appName')."-续费成功";
+                $to = $user->email;
+                $text = "您好，系统已经为您自动续费，商品名：".$shop->name.",金额:".$bought->price." 元。" ;
+                try {
+                    Mail::send($to, $subject, 'news/warn.tpl', [
+                        "user" => $user,"text" => $text
+                    ], [
+                    ]);
+                } catch (Exception $e) {
+                    echo $e->getMessage();
+                }
+
+                if (file_exists(BASE_PATH."/storage/".$bought->id.".renew")) {
+                    unlink(BASE_PATH."/storage/".$bought->id.".renew");
+                }
+            } else {
+                if (!file_exists(BASE_PATH."/storage/".$bought->id.".renew")) {
+                    $subject = Config::get('appName')."-续费失败";
+                    $to = $user->email;
+                    $text = "您好，系统为您自动续费商品名：".$shop->name.",金额:".$bought->price." 元 时，发现您余额不足，请及时充值，当您充值之后，稍等一会系统就会自动扣费为您续费了。" ;
+                    try {
+                        Mail::send($to, $subject, 'news/warn.tpl', [
+                            "user" => $user,"text" => $text
+                        ], [
+                        ]);
+                    } catch (Exception $e) {
+                        echo $e->getMessage();
+                    }
+                    $myfile = fopen(BASE_PATH."/storage/".$bought->id.".renew", "w+") or die("Unable to open file!");
+                    $txt = "1";
+                    fwrite($myfile, $txt);
+                    fclose($myfile);
+                }
+            }
+        }
 
         Ip::where("datetime", "<", time()-300)->delete();
         UnblockIp::where("datetime", "<", time()-300)->delete();
