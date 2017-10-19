@@ -946,6 +946,8 @@ class UserController extends BaseController
             $bought->renew=time()+$shop->auto_renew*86400;
         }
 
+        $bought->renew_bandwidth=$shop->auto_renew_bandwidth;
+        
         $bought->coupon=$code;
 
 
