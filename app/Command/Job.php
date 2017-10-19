@@ -448,6 +448,7 @@ class Job
                 $shop->buy($user, 1);
 
                 $bought->renew=0;
+                $bought->renew_bandwidth=0;
                 $bought->save();
 
 
