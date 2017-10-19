@@ -435,7 +435,7 @@ class Job
         $boughts_renew2=Bought::where("renew_bandwidth", "<>", 0)->get();
         foreach ($boughts_renew2 as $bought) {
             $user=User::where("id", $bought->userid)->first();
-             if ($user->money>=$bought->price) {
+             if ($user->u+$user->d>=$user->transfer_enable) {
                 $shop=Shop::where("id", $bought->shopid)->first();
 
                 if ($shop == null) {
