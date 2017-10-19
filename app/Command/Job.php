@@ -390,6 +390,7 @@ class Job
                 $bought_new->shopid=$shop->id;
                 $bought_new->datetime=time();
                 $bought_new->renew=time()+$shop->auto_renew*86400;
+                $bought_new->renew_bandwidth=$shop->auto_renew_bandwidth;
                 $bought_new->price=$bought->price;
                 $bought_new->coupon="";
                 $bought_new->save();
@@ -459,7 +460,7 @@ class Job
                 $bought_new->renew=time()+$shop->auto_renew*86400;
                 $bought_new->price=$bought->price;
                 $bought_new->coupon="";
-                $bought_new->renew_bandwidth=1;
+                $bought_new->renew_bandwidth=$shop->auto_renew_bandwidth;
                 $bought_new->save();
 
                 $subject = Config::get('appName')."-续费成功";
