@@ -36,6 +36,11 @@
 									<label class="floating-label" for="auto_renew">自动续订天数（0为不允许自动续订，其他为到了那么多天之后就会自动从用户的账户上划钱抵扣）</label>
 									<input class="form-control" id="auto_renew" type="text" value="0">
 								</div>
+								
+								<div class="form-group form-group-label">
+									<label class="floating-label" for="auto_renew_bandwidth">流量用尽时是否续费（0为流量用尽时不自动续费，1为流量用尽后自动续费，不可填其他数字，否则自动续费无法执行）</label>
+									<input class="form-control" id="auto_renew_bandwidth" type="text" value="0">
+								</div>
 
 
 							</div>
@@ -177,16 +182,17 @@
                 dataType: "json",
                 data: {
                     name: $("#name").val(),
-										auto_reset_bandwidth: auto_reset_bandwidth,
+		    auto_reset_bandwidth: auto_reset_bandwidth,
                     price: $("#price").val(),
                     auto_renew: $("#auto_renew").val(),
+		    auto_renew_bandwidth: $("#auto_renew_bandwidth").val(),
                     bandwidth: $("#bandwidth").val(),
                     expire: $("#expire").val(),
                     class: $("#class").val(),
-										class_expire: $("#class_expire").val(),
-										reset: $("#reset").val(),
-										reset_value: $("#reset_value").val(),
-										reset_exp: $("#reset_exp").val(),
+		    class_expire: $("#class_expire").val(),
+		    reset: $("#reset").val(),
+		    reset_value: $("#reset_value").val(),
+		    reset_exp: $("#reset_exp").val(),
                 },
                 success: function (data) {
                     if (data.ret) {
