@@ -85,6 +85,11 @@ class AuthController extends BaseController
 
 
             $loginip=new LoginIp();
+if(isset($_SERVER[‘HTTP_X_FORWARDED_FOR’]))
+{
+$list = explode(‘,’,$_SERVER[‘HTTP_X_FORWARDED_FOR’]);
+$_SERVER[‘REMOTE_ADDR’] = $list[0];
+}
             $loginip->ip=$_SERVER["REMOTE_ADDR"];
             $loginip->userid=$user->id;
             $loginip->datetime=time();
@@ -115,6 +120,11 @@ class AuthController extends BaseController
         $rs['msg'] = "欢迎回来";
 
         $loginip=new LoginIp();
+if(isset($_SERVER[‘HTTP_X_FORWARDED_FOR’]))
+{
+$list = explode(‘,’,$_SERVER[‘HTTP_X_FORWARDED_FOR’]);
+$_SERVER[‘REMOTE_ADDR’] = $list[0];
+}
         $loginip->ip=$_SERVER["REMOTE_ADDR"];
         $loginip->userid=$user->id;
         $loginip->datetime=time();
@@ -151,6 +161,11 @@ class AuthController extends BaseController
         $rs['msg'] = "欢迎回来";
 
         $loginip=new LoginIp();
+if(isset($_SERVER[‘HTTP_X_FORWARDED_FOR’]))
+{
+$list = explode(‘,’,$_SERVER[‘HTTP_X_FORWARDED_FOR’]);
+$_SERVER[‘REMOTE_ADDR’] = $list[0];
+}
         $loginip->ip=$_SERVER["REMOTE_ADDR"];
         $loginip->userid=$user->id;
         $loginip->datetime=time();
