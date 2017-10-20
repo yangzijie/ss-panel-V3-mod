@@ -243,6 +243,10 @@ $_SERVER[‘REMOTE_ADDR’] = $list[0];
 
             $ev = new EmailVerify();
             $ev->expire_in = time() + Config::get('email_verify_ttl');
+if ( isset($_SERVER[‘HTTP_X_FORWARDED_FOR’]) )  {
+    $list = explode(‘,’,$_SERVER[‘HTTP_X_FORWARDED_FOR’]);
+    $_SERVER[‘REMOTE_ADDR’] = $list[0];
+}
             $ev->ip = $_SERVER["REMOTE_ADDR"];
             $ev->email = $email;
             $ev->code = $code;
@@ -383,6 +387,10 @@ $_SERVER[‘REMOTE_ADDR’] = $list[0];
         }
         $user->expire_in=date("Y-m-d H:i:s", time()+Config::get('user_expire_in_default')*86400);
         $user->reg_date=date("Y-m-d H:i:s");
+if ( isset($_SERVER[‘HTTP_X_FORWARDED_FOR’]) )  {
+    $list = explode(‘,’,$_SERVER[‘HTTP_X_FORWARDED_FOR’]);
+    $_SERVER[‘REMOTE_ADDR’] = $list[0];
+}
         $user->reg_ip=$_SERVER["REMOTE_ADDR"];
         $user->money=0;
         $user->class=1;
