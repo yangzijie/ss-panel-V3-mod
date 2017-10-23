@@ -77,7 +77,7 @@
 
 <script>
 {foreach $nodes as $node}
-document.write("{$node->node_bandwidth}"+"<br />");
+document.write("{$node->node_bandwidth}"+"\n");
 {/foreach}
 </script>
 
