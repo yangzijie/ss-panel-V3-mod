@@ -94,7 +94,7 @@
 							<p>各服务器流量</p>
 							
 							<table text-align="center" class="mdl-data-table" cellspacing="0" width="100%">
-							<tr><th>服务器</th><th>已用流量</th></tr>
+							<tr><th class="mdl-data-table__cell--non-numeric">服务器</th><th class="mdl-data-table__cell--non-numeric">已用流量</th></tr>
 							{foreach $nodes as $node}
 
 <script>
@@ -102,28 +102,28 @@ var traffic = {($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rat
 
 if ( traffic < 1048576 )
 {
-    document.write("<tr><td>{$node->name}</td><td>");
+    document.write("<tr><td class="mdl-data-table__cell--non-numeric">{$node->name}</td><td class="mdl-data-table__cell--non-numeric">");
     document.write((traffic/1024).toFixed(3));
     document.write("kb</td></tr>"); 
 }
 
 else if ( traffic < 1073741824 )
 {
-    document.write("<tr><td>{$node->name}</td><td>");
+    document.write("<tr><td class="mdl-data-table__cell--non-numeric">{$node->name}</td><td class="mdl-data-table__cell--non-numeric">");
     document.write((traffic/1048576).toFixed(3));
     document.write("M</td></tr>"); 
 }
 
 else if ( traffic < 1099511627776 )
 {
-    document.write("<tr><td>{$node->name}</td><td>");
+    document.write("<tr><td class="mdl-data-table__cell--non-numeric">{$node->name}</td><td class="mdl-data-table__cell--non-numeric">");
     document.write((traffic/1073741824).toFixed(3));
     document.write("G</td></tr>"); 
 }
 
 else if ( traffic > 1099511627776)
 {
-    document.write("<tr><td>{$node->name}</td><td>"); 
+    document.write("<tr><td class="mdl-data-table__cell--non-numeric">{$node->name}</td><td class="mdl-data-table__cell--non-numeric">"); 
     document.write((traffic/1099511627776).toFixed(3));
     document.write("T</td></tr>");
 
