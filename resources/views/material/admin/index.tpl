@@ -75,6 +75,10 @@
 										<p>已用流量：{(($sts->getLastTrafficUsage()))}</p>
 										<p>今日流量：{(($sts->getTodayTrafficUsage()))}</p>
 										
+<script>
+var arr = $nodes.toString()
+document.write(arr);
+</script>
 										
 									</div>
 									
