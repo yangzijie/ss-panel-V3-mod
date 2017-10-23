@@ -84,9 +84,7 @@
 						
 						</div>
 						
-{foreach $nodes as $node}
-{ $real_traffic = ($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate }
-{/foreach}
+
 						
 						<div class="col-lg-6 col-sm-6">
 
