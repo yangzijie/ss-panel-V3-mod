@@ -91,7 +91,7 @@
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
 							{foreach $nodes as $node}
-
+{ $real_traffic = ($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate }
 <script>
 var traffic = {($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate}
 
