@@ -93,7 +93,7 @@
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
 							
-							<table class="mdl-data-table" cellspacing="0" width="100%">
+							<table text-align="center" class="mdl-data-table" cellspacing="0" width="100%">
 							<tr><th>服务器</th><th>已用流量</th></tr>
 							{foreach $nodes as $node}
 
