@@ -74,12 +74,12 @@
 									
 										<p>已用流量：{(($sts->getLastTrafficUsage()))}</p>
 										<p>今日流量：{(($sts->getTodayTrafficUsage()))}</p>
-										
+{foreach $nodes as $node}
 <script>
-var arr = $nodes.toString()
-document.write(arr);
+var arr = $node.toString()
+document.write(arr+"<br />");
 </script>
-										
+{/foreach}
 									</div>
 									
 								</div>
