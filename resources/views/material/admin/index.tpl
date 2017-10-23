@@ -125,7 +125,6 @@ else if ( traffic > 1099511627776)
     document.write('<tr><td class="mdl-data-table__cell--non-numeric">{$node->name}</td><td class="mdl-data-table__cell--non-numeric">'); 
     document.write((traffic/1099511627776).toFixed(3));
     document.write("T</td></tr>");
-
 }
 </script>
 
