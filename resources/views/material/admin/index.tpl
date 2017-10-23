@@ -129,7 +129,6 @@ else if ( traffic > 1099511627776)
 
 }
 </script>
-<br />
 
 							{/foreach}
 							</table>
