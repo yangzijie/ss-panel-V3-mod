@@ -76,7 +76,7 @@
 										<p>今日流量：{(($sts->getTodayTrafficUsage()))}</p>
 {foreach $nodes as $node}
 <script>
-var arr = $node.toString()
+var arr = $node.toString();
 document.write(arr+"<br />");
 </script>
 {/foreach}
