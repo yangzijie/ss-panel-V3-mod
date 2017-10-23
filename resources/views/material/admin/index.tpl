@@ -74,9 +74,13 @@
 									
 										<p>已用流量：{(($sts->getLastTrafficUsage()))}</p>
 										<p>今日流量：{(($sts->getTodayTrafficUsage()))}</p>
+
 <script>
-document.write("Hi!");
+{foreach $nodes as $node}
+document.write("{$node->node_bandwidth}");
+{/foreach}
 </script>
+
 									</div>
 									
 								</div>
