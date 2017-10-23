@@ -77,7 +77,7 @@
 {foreach $nodes as $node}
 <script>
 var arr = $node.toString();
-document.write(arr+"<br />");
+document.write("<br />");
 </script>
 {/foreach}
 									</div>
