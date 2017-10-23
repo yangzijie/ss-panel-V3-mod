@@ -91,8 +91,7 @@
 						<div class="card">
 						<div class="card-main">
 						<div class="card-inner margin-bottom-no">
-							<p>各服务器流量</p>
-							
+						<div class="card-table">
 							<table text-align="center" class="mdl-data-table" cellspacing="0" width="100%">
 							<tr><th class="mdl-data-table__cell--non-numeric">服务器</th><th class="mdl-data-table__cell--non-numeric">已用流量</th></tr>
 							{foreach $nodes as $node}
@@ -132,6 +131,7 @@ else if ( traffic > 1099511627776)
 
 							{/foreach}
 							</table>
+						</div>
 						</div>
 						</div>
 						</div>
