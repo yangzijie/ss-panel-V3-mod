@@ -92,6 +92,9 @@
 						<div class="card-main">
 						<div class="card-inner margin-bottom-no">
 							<p>各服务器流量</p>
+							
+							<table>
+							<tr><th>服务器</th><th>已用流量</th></tr>
 							{foreach $nodes as $node}
 
 <script>
@@ -129,6 +132,7 @@ else if ( traffic > 1099511627776)
 <br />
 
 							{/foreach}
+							</table>
 						</div>
 						</div>
 						</div>
