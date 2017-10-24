@@ -75,11 +75,6 @@
 										<p>已用流量：{(($sts->getLastTrafficUsage()))}</p>
 										<p>今日流量：{(($sts->getTodayTrafficUsage()))}</p>
 
-<script>
-for ( $node in $nodes ) {
-document.write("{$node->node_bandwidth}"+"\n");
-}
-</script>
 
 									</div>
 									
@@ -102,7 +97,7 @@ document.write("{$node->node_bandwidth}"+"\n");
 							{foreach $nodes as $node}
 
 <script>
-var traffic = {($node->node_bandwidth-$node->node_last_day_t)/$node->traffic_rate}
+var traffic = {$node->node_bandwidth-$node->node_last_day_t}
 
 if ( traffic < 1048576 )
 {
