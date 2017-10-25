@@ -93,7 +93,7 @@
 						<div class="card-inner margin-bottom-no">
 						<div class="card-table">
 							<table text-align="center" class="mdl-data-table" cellspacing="0" width="100%">
-							<tr><th class="mdl-data-table__cell--non-numeric">服务器</th><th class="mdl-data-table__cell--non-numeric">已用流量</th></tr>
+							<tr><th class="mdl-data-table__cell--non-numeric">服务器</th><th class="mdl-data-table__cell--non-numeric">今日流量</th></tr>
 							{foreach $nodes as $node}
 
 <script>
