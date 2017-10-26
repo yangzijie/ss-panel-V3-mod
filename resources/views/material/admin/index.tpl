@@ -52,9 +52,9 @@
 								<div class="card-main">
 									<div class="card-inner margin-bottom-no">
 								
-										<p>金额</p>
-										<p>30天内用户折扣后消费：{$sts->getRealCost()}元</p>
-										<p>30天内aff总金额：{$sts->getAff()}元</p>
+										<p>金额（30天内）</p>
+										<p>用户折后消费：{$sts->getRealCost()}元</p>
+										<p>aff总金额：{$sts->getAff()}元</p>
 										
 									</div>
 									
