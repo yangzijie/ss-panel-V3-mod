@@ -47,6 +47,20 @@
 									
 								</div>
 							</div>
+							
+							<div class="card">
+								<div class="card-main">
+									<div class="card-inner margin-bottom-no">
+								
+										<p>金额</p>
+										<p>30天内用户消费：{$sts->getRealCost()}元</p>
+										<p>一小时内：{0}人</p>
+										<p>一分钟内：{0}人</p>
+										
+									</div>
+									
+								</div>
+							</div>
 						
 						
 						</div>
