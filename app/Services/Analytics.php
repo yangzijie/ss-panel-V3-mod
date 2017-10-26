@@ -30,6 +30,11 @@ class Analytics
         return Bought::where('shopid', '=', 1)->where('datetime', '>', $time)->count();
         
     }
+    public function getRealCost()
+    {
+        $time=time()-30*86400;
+        return Bought::where('datetime', '>', $time)->sum(price);
+    }
 
     public function getCheckinUser()
     {
