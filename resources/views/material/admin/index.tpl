@@ -54,7 +54,7 @@
 								
 										<p>金额</p>
 										<p>30天内用户折扣后消费：{$sts->getRealCost()}元</p>
-										<p>30天内aff总金额：{$sts->getAff()}人</p>
+										<p>30天内aff总金额：{$sts->getAff()}元</p>
 										
 									</div>
 									
