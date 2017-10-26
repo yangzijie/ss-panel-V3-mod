@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\Bought;
+use App\Models\Payback;
 use App\Models\User;
 use App\Models\Node;
 use App\Utils\Tools;
@@ -35,6 +36,11 @@ class Analytics
     {
         $time=time()-30*86400;
         return Bought::where('datetime', '>', $time)->sum(price);
+    }
+    public function getAff()
+    {
+        $time=time()-30*86400;
+        return Payback::where('datetime', '>', $time)->where('ref_by', '>', 1)->sum(ref_get);
     }
 
     public function getCheckinUser()
